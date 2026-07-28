@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="theme_terms_conditions_page" model="theme.ir.ui.view">
+            <field name="name">Theme Terms and Conditions Page</field>
+            <field name="key">theme_bioelevate.theme_terms_conditions_page</field>
+            <field name="inherit_id" ref="account.account_terms_conditions_page" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='oe_structure_terms_conditions']" position="replace">
+                    <div id="wrap" class="oe_structure">
+                        <section class="s_text_block o_cc o_cc5 pt96 pb48 o_colored_level"
+                            data-snippet="s_text_block" data-name="Terms Hero">
+                            <div class="container">
+                                <h1 class="display-3 mb-3">Terms and Conditions</h1>
+                                <p class="lead mb-0">Please review our terms carefully before using this website.</p>
+                            </div>
+                        </section>
+
+                        <section class="s_text_block o_cc o_cc1 pt48 pb96 o_colored_level"
+                            data-snippet="s_text_block" data-name="Terms Content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-9 col-lg-10">
+                                        <div id="o_terms_conditions">
+                                            <div t-field="company.invoice_terms_html" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </xpath>
+                <xpath expr="//div[@id='o_terms_conditions']/.." position="replace" />
+            </field>
+        </record>
+    </data>
+</odoo>

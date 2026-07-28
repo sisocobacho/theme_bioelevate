@@ -1,0 +1,38 @@
+$o-website-values-palettes: (
+    (
+        'header-template': 'stretch',
+        'footer': 5,
+        'footer-template': 'website_sale',
+        'color-palettes-name': 'bioelevate-default-light',
+        'btn-border-radius': 4px,
+        'btn-border-radius-sm': 4px,
+        'btn-border-radius-lg': 4px,
+    ),
+);
+$o-color-palettes: map-merge(
+    $o-color-palettes,
+    (
+        'bioelevate-default-light': (
+            'o-color-1': #78C8A2,
+            'o-color-2': #B1DCC3,
+            'o-color-3': #F4F4F4,
+            'o-color-4': #FFFFFF,
+            'o-color-5': #0F4256,
+        ),
+    )
+);
+
+$o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'bioelevate-default-light');
+
+// --- Deviation: CSS blur on hero background ---
+// Reason: Aesthetic requirement — no Odoo native pattern exists
+// Risk: ~96% browser support; no IE; minimal perf cost
+// Rollback: Remove this block; hero returns to unblurred
+section.s_cover > .s_parallax_bg,
+section.s_parallax > .s_parallax_bg {
+    filter: blur(12px);
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    left: -20px;
+    top: -20px;
+}

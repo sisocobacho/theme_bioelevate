@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="theme_portal_sidebar_no_branding" model="theme.ir.ui.view">
+        <field name="name">Portal Sidebar No Branding</field>
+        <field name="key">theme_bioelevate.theme_portal_sidebar_no_branding</field>
+        <field name="inherit_id" ref="portal.portal_record_sidebar"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='sidebar_content']/div[.//a[contains(@href,'odoo.com') and contains(@href,'utm_medium=portal')]]" position="replace">
+                <div class="d-none d-lg-block mt-5 small text-center text-muted"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

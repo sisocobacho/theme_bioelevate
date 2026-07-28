@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="theme_shop_hide_product_images" model="theme.ir.ui.view">
+            <field name="name">Theme Shop Hide Product Images</field>
+            <field name="key">theme_bioelevate.theme_shop_hide_product_images</field>
+            <field name="inherit_id" ref="website_sale.products"/>
+            <field name="arch" type="xml">
+                <xpath expr="//section[@id='o_wsale_products_grid']" position="attributes">
+                    <attribute name="t-attf-class" add=" theme_bioelevate_no_product_images" separator=" "/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

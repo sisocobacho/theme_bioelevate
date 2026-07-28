@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="img_logo" model="ir.attachment">
+        <field name="public" eval="True" />
+        <field name="name">logo.png</field>
+        <field name="type">url</field>
+        <field name="url">/theme_bioelevate/static/src/img/logo.png</field>
+    </record>
+    <record id="img_hero_medical" model="ir.attachment">
+        <field name="public" eval="True" />
+        <field name="name">hero_medical.jpg</field>
+        <field name="type">url</field>
+        <field name="url">/theme_bioelevate/static/src/img/hero_medical.jpg</field>
+    </record>
+    <record id="img_hero_pharmacy" model="ir.attachment">
+        <field name="public" eval="True" />
+        <field name="name">hero_pharmacy.jpg</field>
+        <field name="type">url</field>
+        <field name="url">/theme_bioelevate/static/src/img/hero_pharmacy.jpg</field>
+    </record>
+    <record id="img_cat_diagnostics" model="ir.attachment">
+        <field name="public" eval="True" />
+        <field name="name">cat_diagnostics.jpg</field>
+        <field name="type">url</field>
+        <field name="url">/theme_bioelevate/static/src/img/cat_diagnostics.jpg</field>
+    </record>
+    <record id="img_cat_ppe" model="ir.attachment">
+        <field name="public" eval="True" />
+        <field name="name">cat_ppe.jpg</field>
+        <field name="type">url</field>
+        <field name="url">/theme_bioelevate/static/src/img/cat_ppe.jpg</field>
+    </record>
+    <record id="img_cat_equipment" model="ir.attachment">
+        <field name="public" eval="True" />
+        <field name="name">cat_equipment.jpg</field>
+        <field name="type">url</field>
+        <field name="url">/theme_bioelevate/static/src/img/cat_equipment.jpg</field>
+    </record>
+    <record id="img_cat_pharma" model="ir.attachment">
+        <field name="public" eval="True" />
+        <field name="name">cat_pharma.jpg</field>
+        <field name="type">url</field>
+        <field name="url">/theme_bioelevate/static/src/img/cat_pharma.jpg</field>
+    </record>
+</odoo>

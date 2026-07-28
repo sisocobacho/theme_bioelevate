@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Product list: Hide attribute filters (sidebar and top-nav) -->
+        <function model="theme.utils" name="disable_view">
+            <value eval="'website_sale.products_attributes_top'" />
+        </function>
+        <function model="theme.utils" name="disable_view">
+            <value eval="'website_sale.products_attributes'" />
+        </function>
+
+        <!-- Category filmstrip: Grid pill style -->
+        <function model="theme.utils" name="disable_view">
+            <value eval="'website_sale.filmstrip_categories_grid'" />
+        </function>
+        <function model="theme.utils" name="enable_view">
+            <value eval="'website_sale.filmstrip_categories_pills'" />
+        </function>
+
+        <!-- Mobile: Single column layout -->
+        <function model="theme.utils" name="enable_view">
+            <value eval="'website_sale.products_mobile_cols_single'" />
+        </function>
+
+        <!-- Product list: condensed design preset from website editor -->
+        <function model="website" name="write">
+            <function model="website" name="search" eval="[[('id', '=', ref('website.default_website'))]]" />
+            <value eval="{'shop_ppg': 40, 'shop_ppr': 4, 'shop_gap': '4px', 'shop_page_container': 'regular', 'shop_opt_products_design_classes': 'o_wsale_products_opt_name_color_regular o_wsale_products_opt_thumb_cover o_wsale_products_opt_has_cta o_wsale_products_opt_has_wishlist o_wsale_products_opt_actions_inline o_wsale_products_opt_cc o_wsale_products_opt_cc1 o_wsale_products_opt_rounded_1 o_wsale_products_opt_actions_promote o_wsale_products_opt_name_size_body o_wsale_products_opt_layout_list o_wsale_products_opt_design_condensed'}" />
+        </function>
+
+        <function model="website.assets" name="make_scss_customization">
+            <value eval="'/website/static/src/scss/options/user_values.scss'" />
+            <value
+                eval="{'shop-page-opt-products-design-classes': 'o_wsale_products_opt_name_color_regular o_wsale_products_opt_thumb_cover o_wsale_products_opt_has_cta o_wsale_products_opt_has_wishlist o_wsale_products_opt_actions_inline o_wsale_products_opt_cc o_wsale_products_opt_cc1 o_wsale_products_opt_rounded_1 o_wsale_products_opt_actions_promote o_wsale_products_opt_name_size_body o_wsale_products_opt_layout_list o_wsale_products_opt_design_condensed'}" />
+        </function>
+
+    </data>
+</odoo>

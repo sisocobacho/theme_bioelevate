@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="page_legal_compliance" model="website.page">
+            <field name="name">Legal &amp; Compliance</field>
+            <field name="website_id" ref="website.default_website" />
+            <field name="is_published" eval="True" />
+            <field name="url">/legal-compliance</field>
+            <field name="type">qweb</field>
+            <field name="arch" type="xml">
+                <t t-name="theme_bioelevate.page_legal_compliance"
+                    name="Legal &amp; Compliance">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+                            <section class="s_text_block o_cc o_cc5 pt96 pb48 o_colored_level"
+                                data-snippet="s_text_block" data-name="Legal Hero">
+                                <div class="container">
+                                    <h1 class="display-3 mb-3">What you need to know.</h1>
+                                    <p class="lead mb-0">We've written this in plain language. It
+                                        covers who we sell to, what the products are, how the
+                                        regulatory framework works, and what your responsibilities
+                                        are as a buyer. If you have questions, just ask.</p>
+                                </div>
+                            </section>
+
+                            <section class="s_text_block o_cc o_cc1 pt48 pb96 o_colored_level"
+                                data-snippet="s_text_block" data-name="Legal Content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xl-9 col-lg-10">
+                                            <h4 class="mb-3">Who we sell to</h4>
+                                            <p>BioElevate sells exclusively to licensed medical
+                                                professionals, clinics, and qualified distributors.
+                                                We do not sell to the general public or to
+                                                individual patients.</p>
+                                            <p>To place an order, you need to be operating in a
+                                                professional capacity - as a licensed physician,
+                                                clinic operator, compounding pharmacy, or
+                                                pharmaceutical distributor. We verify this before
+                                                processing orders.</p>
+
+                                            <h4 class="mt-5 mb-3">What our products are</h4>
+                                            <p>Peptide-related products may be available through different regulatory pathways depending on the product type, intended use, and jurisdiction.
+
+                                                Availability, distribution, and use requirements can vary and should be evaluated according to applicable laws and regulations.</p>
+                                            <p>Some compounds in our catalog have established
+                                                regulatory pathways for licensed compounding
+                                                pharmacies. Others are available for international
+                                                markets. The product catalog clearly shows the
+                                                availability status of each compound.</p>
+
+                                            <h4 class="mt-5 mb-3">How the regulatory framework works
+                                                (simplified)</h4>
+                                            <p>In the United States, peptide compounds fall into a
+                                                few categories:</p>
+                                            <ul>
+                                                <li>FDA-approved finished drugs available only
+                                                    through authorized channels.</li>
+                                                <li>Compoundable compounds - like NAD+ and
+                                                    Sermorelin - that can be legally prepared by
+                                                    licensed compounding pharmacies for individual
+                                                    patients with a valid prescription.</li>
+                                                <li>Research or non-approved compounds that may be
+                                                    restricted depending on jurisdiction and
+                                                    intended use.</li>
+                                            </ul>
+
+                                            <h4 class="mt-5 mb-3">What you're responsible for as a
+                                                buyer</h4>
+                                            <p>When you purchase from BioElevate, you take on
+                                                responsibility for:</p>
+                                            <ul>
+                                                <li>Verifying that each product is legal to import,
+                                                    compound, dispense, or distribute in your
+                                                    jurisdiction.</li>
+                                                <li>Ensuring use only under licensed professional
+                                                    oversight where required.</li>
+                                                <li>Maintaining proper storage, handling, and
+                                                    cold-chain practices after receipt.</li>
+                                                <li>Using products in compliance with all applicable
+                                                    local, state, and federal regulations.</li>
+                                            </ul>
+                                            <p>If you're unsure about the regulatory requirements
+                                                for a specific product in your jurisdiction, we
+                                                recommend speaking with a qualified healthcare
+                                                attorney or regulatory consultant before ordering.</p>
+
+                                            <h4 class="mt-5 mb-3">Our quality commitment</h4>
+                                            <p>Every product we supply is tested for purity
+                                                (&gt;=99% by HPLC), identity (mass spectrometry),
+                                                and endotoxin levels. You receive a lot-specific
+                                                Certificate of Analysis with every order. We do not
+                                                supply products that do not meet these standards.</p>
+                                            <p>Products are stored and shipped at 2-8C with
+                                                validated cold-chain packaging. Temperature logs are
+                                                available on request.</p>
+
+                                            <h4 class="mt-5 mb-3">Disclaimer</h4>
+                                            <p class="small">The information on this website is for
+                                                professional reference only. It is not medical
+                                                advice and does not constitute a recommendation to
+                                                prescribe, administer, or use any product. BioElevate
+                                                Universal makes no claims about the therapeutic
+                                                efficacy of any compound. Product descriptions are
+                                                for informational purposes only. Regulatory
+                                                information reflects our best understanding at the
+                                                time of publication and may change - always verify
+                                                current status with qualified counsel before making
+                                                purchasing decisions.</p>
+                                            <p class="small mb-0">© 2026 BioElevate. All rights
+                                                reserved.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="menu_legal_compliance" model="website.menu">
+            <field name="name">Legal &amp; Compliance</field>
+            <field name="url">/legal-compliance</field>
+            <field name="page_id" ref="theme_bioelevate.page_legal_compliance" />
+            <field
+                name="parent_id"
+                search="[('website_id', '=', ref('website.default_website')),('url', '=', '#')]" />
+            <field name="website_id" ref="website.default_website" />
+            <field name="sequence" eval="55" />
+        </record>
+
+        <delete model="website.menu"
+            search="[('website_id', '=', ref('website.default_website')), ('url', '=', '/contactus')]" />
+    </data>
+</odoo>

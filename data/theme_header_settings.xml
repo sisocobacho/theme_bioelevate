@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <function model="website.assets" name="make_scss_customization">
+            <value eval="'/website/static/src/scss/options/user_values.scss'" />
+            <value eval="{'header-template': 'stretch'}" />
+        </function>
+    </data>
+</odoo>

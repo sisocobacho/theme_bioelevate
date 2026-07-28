@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Homepage content override using theme.ir.ui.view
+        Inherits website.homepage and replaces the empty #wrap with theme sections.
+        Source reference: addons/website/models/theme_models.py:51-108 (ThemeIrUiView)
+
+        Sections:
+        1. Hero - B2B peptide supplier intro + Quality Standards panel
+        2. Trust Strip - 5 trust indicators
+        3. About Section - Company intro + 4 stat cards
+        4. Contact Section - Contact info + form (s_website_form pattern)
+    -->
+    <record id="theme_homepage_content" model="theme.ir.ui.view">
+        <field name="name">BioElevate Theme Homepage Content</field>
+        <field name="key">theme_bioelevate.theme_homepage_content</field>
+        <field name="inherit_id" ref="website.homepage" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='wrap']" position="replace">
+                <div id="wrap" class="oe_structure">
+
+                    <!-- ============================================================
+                         SECTION 1: HERO (No Background Image)
+                         Two columns: Left = intro text, Right = Quality Standards panel
+                         Color scheme: o_cc5 (dark background)
+                    ============================================================ -->
+                    <section class="s_text_block o_cc o_cc5 pt160 pb96 o_colored_level"
+                        data-snippet="s_text_block" data-name="Hero">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <!-- Left Column: Intro -->
+                                <div class="col-lg-7 pb48 o_colored_level">
+                                    <!-- Eyebrow Badge -->
+                                    <span
+                                        class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mb-4 px-3 py-2">
+                                        <span class="fa fa-circle " style="font-size: xx-small;" />
+                                        For licensed clinics &amp; professional distributors </span>
+                                    <h1 class="display-3 mb-4">Premium peptide products for clinical <em>
+                                        professionals.</em></h1>
+                                    <p class="lead mb-5">BioElevate supplies high-purity
+                                        peptide products to licensed clinics, medical professionals,
+                                        and qualified distributors across the US, Latin America, and
+                                        the Caribbean.</p>
+                                    <p>
+                                        <a class="btn btn-primary btn-lg" href="/shop">Browse
+                                            Products</a>
+                                        <a class="btn btn-outline-light btn-lg ms-2"
+                                            href="#contact-section">Get in Touch</a>
+                                    </p>
+                                </div>
+                                <!-- Right Column: Quality Standards Panel -->
+                                <div class="col-lg-5 o_colored_level">
+                                    <div
+                                        class="card border-secondary bg-dark bg-opacity-50 rounded-4">
+                                        <div class="card-body p-4">
+                                            <!-- Panel Title -->
+                                            <h6
+                                                class="text-uppercase text-muted small fw-bold letter-spacing-1 border-bottom border-secondary pb-3 mb-3">
+                                                Quality Standards - Every Lot
+                                            </h6>
+                                            <!-- Key-Value Rows -->
+                                            <ul class="list-unstyled mb-0">
+                                                <li
+                                                    class="d-flex justify-content-between align-items-center py-2 border-bottom border-secondary border-opacity-25">
+                                                    <span class="text-muted">Purity (HPLC)</span>
+                                                    <span class="fw-semibold text-primary">&gt;= 99%</span>
+                                                </li>
+                                                <li
+                                                    class="d-flex justify-content-between align-items-center py-2 border-bottom border-secondary border-opacity-25">
+                                                    <span class="text-muted">Endotoxin</span>
+                                                    <span class="fw-semibold">&lt;= 1 EU/ml</span>
+                                                </li>
+                                                <li
+                                                    class="d-flex justify-content-between align-items-center py-2 border-bottom border-secondary border-opacity-25">
+                                                    <span class="text-muted">Identity Testing</span>
+                                                    <span class="fw-semibold">MS Confirmed</span>
+                                                </li>
+                                                <li
+                                                    class="d-flex justify-content-between align-items-center py-2 border-bottom border-secondary border-opacity-25">
+                                                    <span class="text-muted">Certificate of Analysis</span>
+                                                    <span class="fw-semibold text-primary">Included</span>
+                                                </li>
+                                                <li
+                                                    class="d-flex justify-content-between align-items-center py-2 border-bottom border-secondary border-opacity-25">
+                                                    <span class="text-muted">Storage</span>
+                                                    <span class="fw-semibold">2-8C Cold-Chain</span>
+                                                </li>
+                                                <li
+                                                    class="d-flex justify-content-between align-items-center py-2">
+                                                    <span class="text-muted">Access</span>
+                                                    <span class="fw-semibold">B2B - Verified Only</span>
+                                                </li>
+                                            </ul>
+                                            <!-- Panel Footer -->
+                                            <p
+                                                class="small text-muted mt-4 mb-0 pt-3 border-top border-secondary">
+                                                All products are accompanied by a lot-specific
+                                                Certificate of Analysis. Access requires
+                                                professional credentials.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ============================================================
+                         SECTION 2: TRUST STRIP (5 Items)
+                         Horizontal row of trust indicators
+                         Color scheme: o_cc2 (light surface)
+                    ============================================================ -->
+                    <section
+                        class="s_text_block o_cc o_cc2 pt32 pb32 o_colored_level border-top border-bottom"
+                        data-snippet="s_text_block" data-name="Trust Strip">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div
+                                        class="d-flex flex-wrap justify-content-between align-items-center gap-4">
+                                        <!-- Item 1: Purity -->
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span
+                                                class="d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary"
+                                                style="width: 36px; height: 36px;">
+                                                <i class="fa fa-flask text-primary" />
+                                            </span>
+                                            <span class="small text-muted">&gt;= 99% purity, every
+                                                lot</span>
+                                        </div>
+                                        <!-- Item 2: COA -->
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span
+                                                class="d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary"
+                                                style="width: 36px; height: 36px;">
+                                                <i class="fa fa-file-text-o text-primary" />
+                                            </span>
+                                            <span class="small text-muted">Lot-specific COA included</span>
+                                        </div>
+                                        <!-- Item 3: Cold-chain -->
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span
+                                                class="d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary"
+                                                style="width: 36px; height: 36px;">
+                                                <i class="fa fa-snowflake-o text-primary" />
+                                            </span>
+                                            <span class="small text-muted">Cold-chain delivery
+                                                (2-8C)</span>
+                                        </div>
+                                        <!-- Item 4: Regions -->
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span
+                                                class="d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary"
+                                                style="width: 36px; height: 36px;">
+                                                <i class="fa fa-globe text-primary" />
+                                            </span>
+                                            <span class="small text-muted">US - LATAM - Caribbean</span>
+                                        </div>
+                                        <!-- Item 5: Verified -->
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span
+                                                class="d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary"
+                                                style="width: 36px; height: 36px;">
+                                                <i class="fa fa-lock text-primary" />
+                                            </span>
+                                            <span class="small text-muted">Verified professionals
+                                                only</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ============================================================
+                         SECTION 3: ABOUT SECTION
+                         Two columns: Left = intro text, Right = 4 stat cards
+                         Color scheme: o_cc1 (white/light background)
+                    ============================================================ -->
+                    <section class="s_text_block o_cc o_cc1 pt96 pb96 o_colored_level"
+                        data-snippet="s_text_block" data-name="About BioElevate">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <!-- Left Column: Text -->
+                                <div class="col-lg-6 mb-5 mb-lg-0 o_colored_level">
+                                    <span
+                                        class="text-uppercase text-muted small fw-bold d-block mb-3"
+                                        style="letter-spacing: 1.5px;">About BioElevate</span>
+                                    <h2 class="display-5 mb-4">Quality you can count on.</h2>
+                                    <p class="lead text-muted mb-4">We supply peptide products
+                                        exclusively to licensed medical professionals and qualified
+                                        distributors. Every product leaves our facility with
+                                        verified purity data, cold-chain packaging, and full
+                                        documentation.</p>
+                                    <p class="text-muted">Our catalog covers metabolic health,
+                                        tissue recovery, hormonal optimization, anti-aging, and
+                                        neurological support - in injectable vials, oral capsules,
+                                        and combination blends.</p>
+                                </div>
+                                <!-- Right Column: Stat Cards (2x2 grid) -->
+                                <div class="col-lg-6 o_colored_level">
+                                    <div class="row g-3">
+                                        <!-- Stat Card 1: 60+ -->
+                                        <div class="col-6">
+                                            <div class="card h-100 border rounded-3">
+                                                <div class="card-body p-4">
+                                                    <span
+                                                        class="display-4 fw-bold text-primary d-block mb-2">
+                                                        60+</span>
+                                                    <span class="small text-muted">Peptide compounds
+                                                        across 3 formats</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Stat Card 2: 99% -->
+                                        <div class="col-6">
+                                            <div class="card h-100 border rounded-3">
+                                                <div class="card-body p-4">
+                                                    <span
+                                                        class="display-4 fw-bold text-primary d-block mb-2">
+                                                        99%</span>
+                                                    <span class="small text-muted">Minimum purity on
+                                                        every product</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Stat Card 3: 3 -->
+                                        <div class="col-6">
+                                            <div class="card h-100 border rounded-3">
+                                                <div class="card-body p-4">
+                                                    <span
+                                                        class="display-4 fw-bold text-primary d-block mb-2">
+                                                        3</span>
+                                                    <span class="small text-muted">Product formats:
+                                                        vials, capsules, blends</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Stat Card 4: US+ -->
+                                        <div class="col-6">
+                                            <div class="card h-100 border rounded-3">
+                                                <div class="card-body p-4">
+                                                    <span
+                                                        class="display-4 fw-bold text-primary d-block mb-2">
+                                                        US+</span>
+                                                    <span class="small text-muted">Serving US, LATAM
+                                                        &amp; Caribbean markets</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ============================================================
+                         SECTION 4: CONTACT SECTION
+                         Two columns: Left = contact info, Right = contact form
+                         Color scheme: o_cc2 (light surface)
+                         Source reference: addons/website/views/snippets/s_website_form.xml
+                    ============================================================ -->
+                    <section class="s_website_form o_cc o_cc2 pt96 pb96 o_colored_level"
+                        id="contact-section"
+                        data-snippet="s_website_form" data-name="Contact Us">
+                        <div class="container">
+                            <div class="row">
+                                <!-- Left Column: Contact Info -->
+                                <div class="col-lg-5 mb-5 mb-lg-0 o_colored_level">
+                                    <span
+                                        class="text-uppercase text-muted small fw-bold d-block mb-3"
+                                        style="letter-spacing: 1.5px;">Get in Touch</span>
+                                    <h2 class="display-5 mb-4">Ready to work with us?</h2>
+                                    <p class="lead text-muted mb-5">Reach out to discuss your
+                                        product needs, minimum orders, pricing, or distribution
+                                        opportunities. We respond within 1 business day.</p>
+
+                                    <!-- Contact Items -->
+                                    <div class="d-flex flex-column gap-4">
+                                        <!-- Item 1: Orders -->
+                                        <div class="d-flex gap-3">
+                                            <span
+                                                class="d-flex align-items-center justify-content-center rounded-3 bg-body-tertiary flex-shrink-0"
+                                                style="width: 44px; height: 44px;">
+                                                <i class="fa fa-cube text-primary" />
+                                            </span>
+                                            <div>
+                                                <h6 class="fw-bold mb-1">Orders &amp; Products</h6>
+                                                <p class="small text-muted mb-1">Product
+                                                    availability, pricing, and order placement.</p>
+                                                <a href="mailto:orders@bioelevate.com"
+                                                    class="small text-primary text-decoration-none">
+                                                    orders@bioelevate.com</a>
+                                            </div>
+                                        </div>
+                                        <!-- Item 2: Distribution -->
+                                        <div class="d-flex gap-3">
+                                            <span
+                                                class="d-flex align-items-center justify-content-center rounded-3 bg-body-tertiary flex-shrink-0"
+                                                style="width: 44px; height: 44px;">
+                                                <i class="fa fa-handshake-o text-primary" />
+                                            </span>
+                                            <div>
+                                                <h6 class="fw-bold mb-1">Distribution Partners</h6>
+                                                <p class="small text-muted mb-1">Territory
+                                                    availability, wholesale pricing, and partnership
+                                                    inquiries.</p>
+                                                <a href="mailto:partners@bioelevate.com"
+                                                    class="small text-primary text-decoration-none">
+                                                    partners@bioelevate.com</a>
+                                            </div>
+                                        </div>
+                                        <!-- Item 3: Documentation -->
+                                        <div class="d-flex gap-3">
+                                            <span
+                                                class="d-flex align-items-center justify-content-center rounded-3 bg-body-tertiary flex-shrink-0"
+                                                style="width: 44px; height: 44px;">
+                                                <i class="fa fa-file-text-o text-primary" />
+                                            </span>
+                                            <div>
+                                                <h6 class="fw-bold mb-1">Documentation &amp; COA</h6>
+                                                <p class="small text-muted mb-1">Certificate of
+                                                    Analysis requests and product documentation.</p>
+                                                <a href="mailto:coa@bioelevate.com"
+                                                    class="small text-primary text-decoration-none">
+                                                    coa@bioelevate.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column: Contact Form -->
+                                <div class="col-lg-6 offset-lg-1 o_colored_level">
+                                    <div class="card border rounded-4 shadow-sm">
+                                        <div class="card-body p-4 p-lg-5">
+                                            <h4 class="fw-bold mb-1">Send us a message</h4>
+                                            <p class="small text-muted mb-4">We'll get back to you
+                                                within 1 business day.</p>
+
+                                            <!-- Contact Form (native s_website_form structure) -->
+                                            <form action="/website/form/" method="post"
+                                                enctype="multipart/form-data"
+                                                class="o_mark_required" data-mark="*"
+                                                data-pre-fill="true"
+                                                data-model_name="mail.mail"
+                                                data-success-mode="redirect"
+                                                data-success-page="/contactus-thank-you">
+                                                <div
+                                                    class="s_website_form_rows row s_col_no_bgcolor">
+                                                    <div data-name="Field"
+                                                        class="s_website_form_field mb-3 col-12 s_website_form_dnone d-none">
+                                                        <div
+                                                            class="row s_col_no_resize s_col_no_bgcolor">
+                                                            <label
+                                                                class="col-form-label col-sm-auto s_website_form_label"
+                                                                style="width: 160px">
+                                                                <span
+                                                                    class="s_website_form_label_content"></span>
+                                                            </label>
+                                                            <div class="col-sm">
+                                                                <input type="hidden"
+                                                                    class="form-control s_website_form_input"
+                                                                    name="email_to"
+                                                                    value="info@yourcompany.example.com" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div data-name="Field"
+                                                        class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                                                        data-type="char">
+                                                        <div
+                                                            class="row s_col_no_resize s_col_no_bgcolor">
+                                                            <label
+                                                                class="col-form-label col-sm-auto s_website_form_label"
+                                                                style="width: 160px"
+                                                                for="bioelevate_contact_name">
+                                                                <span
+                                                                    class="s_website_form_label_content">Full
+                                                                    name</span>
+                                                                <span
+                                                                    class="s_website_form_mark text-danger">
+                                                                    *</span>
+                                                            </label>
+                                                            <div class="col-sm">
+                                                                <input
+                                                                    class="form-control s_website_form_input"
+                                                                    type="text"
+                                                                    id="bioelevate_contact_name"
+                                                                    name="name" required="1"
+                                                                    data-fill-with="name"
+                                                                    placeholder="First and last name" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div data-name="Field"
+                                                        class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                                                        data-type="char">
+                                                        <div
+                                                            class="row s_col_no_resize s_col_no_bgcolor">
+                                                            <label
+                                                                class="col-form-label col-sm-auto s_website_form_label"
+                                                                style="width: 160px"
+                                                                for="bioelevate_contact_company">
+                                                                <span
+                                                                    class="s_website_form_label_content">Business
+                                                                    name</span>
+                                                                <span
+                                                                    class="s_website_form_mark text-danger">
+                                                                    *</span>
+                                                            </label>
+                                                            <div class="col-sm">
+                                                                <input
+                                                                    class="form-control s_website_form_input"
+                                                                    type="text"
+                                                                    id="bioelevate_contact_company"
+                                                                    name="company" required="1"
+                                                                    placeholder="Your clinic or organization"
+                                                                    data-fill-with="commercial_company_name" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div data-name="Field"
+                                                        class="s_website_form_field mb-3 col-12 s_website_form_model_required"
+                                                        data-type="email">
+                                                        <div
+                                                            class="row s_col_no_resize s_col_no_bgcolor">
+                                                            <label
+                                                                class="col-form-label col-sm-auto s_website_form_label"
+                                                                style="width: 160px"
+                                                                for="bioelevate_contact_email">
+                                                                <span
+                                                                    class="s_website_form_label_content">Email
+                                                                    address</span>
+                                                                <span
+                                                                    class="s_website_form_mark text-danger">
+                                                                    *</span>
+                                                            </label>
+                                                            <div class="col-sm">
+                                                                <input
+                                                                    class="form-control s_website_form_input"
+                                                                    type="email"
+                                                                    id="bioelevate_contact_email"
+                                                                    name="email_from" required=""
+                                                                    placeholder="you@organization.com"
+                                                                    data-fill-with="email" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div data-name="Field"
+                                                        class="s_website_form_field mb-3 col-12 s_website_form_custom"
+                                                        data-type="selection">
+                                                        <div
+                                                            class="row s_col_no_resize s_col_no_bgcolor">
+                                                            <label
+                                                                class="col-form-label col-sm-auto s_website_form_label"
+                                                                style="width: 160px"
+                                                                for="bioelevate_contact_inquiry">
+                                                                <span
+                                                                    class="s_website_form_label_content">Inquiry
+                                                                    type</span>
+                                                            </label>
+                                                            <div class="col-sm">
+                                                                <select
+                                                                    class="form-select s_website_form_input"
+                                                                    id="bioelevate_contact_inquiry"
+                                                                    name="inquiry_type">
+                                                                    <option value="">Select...</option>
+                                                                    <option value="pricing">Product
+                                                                        availability &amp; pricing</option>
+                                                                    <option value="distribution">Distribution
+                                                                        partnership</option>
+                                                                    <option value="coa">COA or
+                                                                        documentation request</option>
+                                                                    <option value="order_support">Order
+                                                                        support</option>
+                                                                    <option value="other">Other</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div data-name="Field"
+                                                        class="s_website_form_field mb-3 col-12 s_website_form_custom s_website_form_required"
+                                                        data-type="text">
+                                                        <div
+                                                            class="row s_col_no_resize s_col_no_bgcolor">
+                                                            <label
+                                                                class="col-form-label col-sm-auto s_website_form_label"
+                                                                style="width: 160px"
+                                                                for="bioelevate_contact_message">
+                                                                <span
+                                                                    class="s_website_form_label_content">
+                                                                    Message</span>
+                                                                <span
+                                                                    class="s_website_form_mark text-danger">
+                                                                    *</span>
+                                                            </label>
+                                                            <div class="col-sm">
+                                                                <textarea
+                                                                    class="form-control s_website_form_input"
+                                                                    name="description"
+                                                                    id="bioelevate_contact_message"
+                                                                    required="1" rows="4"
+                                                                    placeholder="Tell us what you're looking for..."></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="mb-0 py-2 col-12 s_website_form_submit text-end s_website_form_no_submit_label"
+                                                        data-name="Submit Button">
+                                                        <div style="width: 160px"
+                                                            class="s_website_form_label"></div>
+                                                        <span id="s_website_form_result" />
+                                                        <a href="#" role="button"
+                                                            class="btn btn-primary s_website_form_send">
+                                                            Send Message
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <p class="small text-muted mb-0 mt-3">
+                                                By submitting this form you confirm you are a
+                                                licensed medical professional or qualified business
+                                                representative. BioElevate does not accept
+                                                consumer or patient inquiries.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

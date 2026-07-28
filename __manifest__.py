@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "BioElevate Theme",
+    "summary": "Modern e-commerce theme for medical supplies",
+    "description": "Modern e-commerce theme designed for the medical field with a clean, professional aesthetic.",
+    "author": "BioElevate",
+    "category": "Theme",
+    "version": "19.0.1.0.0",
+    "depends": [
+        "website",
+        "website_sale",
+        "portal",
+        "account",
+    ],
+    "data": [
+        "data/website.xml",
+        "data/images.xml",
+        "data/theme_header.xml",
+        "data/theme_header_settings.xml",
+        "views/theme_homepage.xml",
+        "views/terms_templates.xml",
+        "data/pages/legal_compliance.xml",
+        "data/pages/policies.xml",
+        "data/pages/shop.xml",
+        "data/pages/product_page.xml",
+        "views/shop_templates.xml",
+        "data/theme_palette.xml",
+        "data/theme_footer.xml",
+        "views/portal_templates.xml",
+        "data/website_configurator_disable.xml",
+        "data/theme_favicon.xml",
+        "views/snippets/snippets.xml",
+    ],
+    "demo": [],
+    "test": [
+        "tests/test_theme_pages.py",
+    ],
+    "assets": {
+        "web._assets_primary_variables": [
+            "theme_bioelevate/static/src/scss/primary_variables.scss",
+        ],
+        "web.assets_frontend": [
+            "theme_bioelevate/static/src/scss/shop_overrides.scss",
+        ],
+    },
+    "pre_init_hook": "pre_init_hook",
+    "installable": True,
+    "application": False,
+}

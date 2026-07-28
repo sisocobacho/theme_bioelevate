@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <function model="theme.utils" name="enable_view">
+            <value eval="'website.footer_no_copyright'" />
+        </function>
+
+        <record id="theme_footer_content" model="theme.ir.ui.view">
+            <field name="name">Theme Footer Content</field>
+            <field name="key">theme_bioelevate.theme_footer_content</field>
+            <field name="inherit_id" ref="website.layout" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='footer']" position="replace">
+                    <div id="footer" class="oe_structure oe_structure_solo text-break o_cc o_cc5 o_colored_level"
+                        t-if="not no_footer">
+                        <section class="s_text_block pt40 pb24 o_cc o_cc5 o_colored_level" data-snippet="s_text_block"
+                            data-name="Footer Top">
+                            <div class="container">
+                                <div class="row g-4">
+                                    <div class="col-lg-4 col-md-12">
+                                        <h5 class="mb-2">BioElevate</h5>
+                                        <p class="mb-0">Premium peptide products for
+                                            licensed medical professionals and qualified
+                                            distributors.</p>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4">
+                                        <h6 class="text-uppercase small fw-semibold mb-3">
+                                            Navigate</h6>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <a href="/">Home</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/shop">Products</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/legal-compliance">Legal &amp; Compliance</a>
+                                            </li>
+                                            <li>
+                                                <a href="/#contact-section">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4">
+                                        <h6 class="text-uppercase small fw-semibold mb-3">
+                                            Legal</h6>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <a href="/privacy">Privacy Policy</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/return-policy">Returns and Refunds Policy</a>
+                                            </li>
+                                            <li>
+                                                <a href="/terms">Terms and Conditions</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4">
+                                        <h6 class="text-uppercase small fw-semibold mb-3">
+                                            Contact</h6>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <a href="mailto:orders@bioelevate.com">
+                                                    orders@bioelevate.com</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="mailto:partners@bioelevate.com">
+                                                    partners@bioelevate.com</a>
+                                            </li>
+                                            <li>
+                                                <a href="mailto:coa@bioelevate.com">
+                                                    coa@bioelevate.com</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="s_text_block pt0 pb24 o_cc o_cc5 o_colored_level" data-snippet="s_text_block"
+                            data-name="Footer Legal">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="small mb-0">For licensed medical
+                                            professionals and qualified distributors only. Products
+                                            are not for consumer sale. All information is for
+                                            professional reference only and does not constitute
+                                            medical advice. Regulatory status of compounds is
+                                            subject to change - verify with qualified counsel before
+                                            ordering. © 2026 BioElevate.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Replace "Powered by Odoo" branding with an empty span,
+             keeping the company name visible in the copyright bar. -->
+        <record id="theme_brand_promotion" model="theme.ir.ui.view">
+            <field name="name">Theme Brand Promotion Override</field>
+            <field name="key">theme_bioelevate.theme_brand_promotion</field>
+            <field name="inherit_id" ref="website.brand_promotion" />
+            <field name="arch" type="xml">
+                <xpath expr="//t[@t-call='web.brand_promotion_message']" position="replace">
+                    <span class="o_brand_promotion" />
+                </xpath>
+            </field>
+        </record>
+
+        <function model="theme.ir.ui.view" name="write">
+            <value model="theme.ir.ui.view" search="[('id', '=', ref('theme_brand_promotion'))]" />
+            <value eval="{'key': 'theme_bioelevate.theme_brand_promotion'}" />
+        </function>
+    </data>
+</odoo>
