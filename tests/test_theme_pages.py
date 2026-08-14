@@ -24,6 +24,49 @@ class TestThemePages(TransactionCase):
         manifest = get_manifest("theme_bioelevate")
         self.assertIsNotNone(manifest, "Module theme_bioelevate is not installed.")
 
+    def test_homepage_url_points_to_shop(self):
+        """Verify website homepage URL is configured to shop route."""
+        website = self.env.ref("website.default_website")
+        self.assertEqual(
+            website.homepage_url,
+            "/shop",
+            "Expected website.default_website homepage_url to be '/shop'.",
+        )
+
+    def test_old_homepage_available_at_home_url(self):
+        """Verify the original homepage page is moved to /home."""
+        website = self.env.ref("website.default_website")
+        homepage_page = self.env["website.page"].search(
+            [
+                ("website_id", "=", website.id),
+                ("key", "=", "website.homepage"),
+            ],
+            limit=1,
+        )
+        self.assertTrue(homepage_page, "Expected homepage page for default website.")
+        self.assertEqual(
+            homepage_page.url,
+            "/home",
+            "Expected website.homepage_page URL to be '/home'.",
+        )
+
+    def test_home_menu_points_to_home_url(self):
+        """Verify main Home menu points to /home on the default website."""
+        website = self.env.ref("website.default_website")
+        home_menu = self.env["website.menu"].search(
+            [
+                ("website_id", "=", website.id),
+                ("name", "=", "Home"),
+            ],
+            limit=1,
+        )
+        self.assertTrue(home_menu, "Expected a 'Home' menu on the default website.")
+        self.assertEqual(
+            home_menu.url,
+            "/home",
+            "Expected Home menu URL to be '/home'.",
+        )
+
     def test_theme_homepage_view_exists(self):
         """Verify theme.ir.ui.view record for homepage content exists."""
         theme_view = self.env.ref(
@@ -142,6 +185,7 @@ class TestThemePages(TransactionCase):
             "Returns and Refunds Policy",
             "/terms",
             "Terms and Conditions",
+            "/home#contact-section",
             "Contact Us",
             "orders@bioelevate.com",
             "partners@bioelevate.com",
@@ -211,9 +255,9 @@ class TestThemePages(TransactionCase):
             "Expected CTA override to inherit from website.header_call_to_action.",
         )
         self.assertIn(
-            "/#contact-section",
+            "/home#contact-section",
             cta_view.arch or "",
-            "Expected header CTA href to target /#contact-section.",
+            "Expected header CTA href to target /home#contact-section.",
         )
 
     def test_website_configurator_todo_marked_done(self):

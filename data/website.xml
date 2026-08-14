@@ -3,9 +3,20 @@
     <data>
         <record id="website.default_website" model="website">
             <field name="name">BioElevate</field>
-            <field name="homepage_url">/</field>
             <field name="logo" type="base64" file="theme_bioelevate/static/src/img/logo.png" />
         </record>
+        <function model="website" name="write">
+            <function model="website" name="search" eval="[[('id', '=', ref('website.default_website'))]]" />
+            <value eval="{'homepage_url': '/shop'}" />
+        </function>
+        <function model="website.page" name="write">
+            <function model="website.page" name="search" eval="[[('website_id', '=', ref('website.default_website')), ('key', '=', 'website.homepage')]]" />
+            <value eval="{'url': '/home'}" />
+        </function>
+        <function model="website.menu" name="write">
+            <function model="website.menu" name="search" eval="[[('website_id', '=', ref('website.default_website')), ('name', '=', 'Home')]]" />
+            <value eval="{'url': '/home'}" />
+        </function>
     </data>
     <data noupdate="1">
         <record id="website.default_website" model="website">

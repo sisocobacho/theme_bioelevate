@@ -45,7 +45,7 @@
                                         <a class="btn btn-primary btn-lg" href="/shop">Browse
                                             Products</a>
                                         <a class="btn btn-outline-light btn-lg ms-2"
-                                            href="#contact-section">Get in Touch</a>
+                                            href="/home#contact-section">Get in Touch</a>
                                     </p>
                                 </div>
                                 <!-- Right Column: Quality Standards Panel -->
