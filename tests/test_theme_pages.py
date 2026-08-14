@@ -139,9 +139,9 @@ class TestThemePages(TransactionCase):
             "s_website_form_rows",
             "s_website_form_label",
             "/contactus-thank-you",
-            "orders@bioelevate.com",
-            "partners@bioelevate.com",
-            "coa@bioelevate.com",
+            "orders@bioelevate.org",
+            "partners@bioelevate.org",
+            "coa@bioelevate.org",
         ]
 
         for fragment in expected_fragments:
@@ -187,9 +187,9 @@ class TestThemePages(TransactionCase):
             "Terms and Conditions",
             "/home#contact-section",
             "Contact Us",
-            "orders@bioelevate.com",
-            "partners@bioelevate.com",
-            "coa@bioelevate.com",
+            "orders@bioelevate.org",
+            "partners@bioelevate.org",
+            "coa@bioelevate.org",
             "For licensed medical professionals and qualified distributors only.",
         ]
 
@@ -494,7 +494,7 @@ class TestThemePages(TransactionCase):
             "BioElevate website is owned by BioElevate",
             "Personal information we collect",
             "The right to data portability",
-            "Info@bioelevate.com",
+            "info@bioelevate.org",
         ]
         for fragment in expected_fragments:
             self.assertIn(
@@ -532,7 +532,7 @@ class TestThemePages(TransactionCase):
             "we do not offer refunds or accept returns under any circumstances",
             "Damaged, Defective, or Incorrect Orders",
             "Lost or Missing Packages",
-            "Info@bioelevate.com",
+            "info@bioelevate.org",
         ]
         for fragment in expected_fragments:
             self.assertIn(

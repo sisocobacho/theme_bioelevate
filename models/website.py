@@ -7,7 +7,7 @@ class Website(models.Model):
     def _force_terms_settings_on_company(self):
         terms_html = """<h1>Terms and Conditions</h1>
 <p>Welcome to BioElevate!</p>
-<p>These terms and conditions outline the rules and regulations for the use of BioElevate's Website, located at https://bioelevate.com.</p>
+<p>These terms and conditions outline the rules and regulations for the use of BioElevate's Website, located at https://bioelevate.org.</p>
 <p>By accessing this website, we assume you accept these terms and conditions. Do not continue to use BioElevate if you do not agree to take all of the terms and conditions stated on this page.</p>
 <h4>Cookies</h4>
 <p>The website uses cookies to help personalize your online experience. By accessing BioElevate, you agreed to use the required cookies.</p>
