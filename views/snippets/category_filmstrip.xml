@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_category_filmstrip_home" name="BioElevate Category Filmstrip">
+        <t t-set="categories"
+            t-value="request.env['product.public.category'].search([('parent_id', '=', False), ('website_id', 'in', [False, request.env['website'].get_current_website().id]), ('has_published_products', '=', True)])" />
+        <section data-snippet="s_category_filmstrip_home" data-name="Category Filmstrip">
+            <div
+                id="o_wsale_categories_filmstrip"
+                class="o_wsale_filmstrip_container o_wsale_filmstrip_pills d-flex align-items-stretch overflow-hidden"
+                role="navigation"
+            >
+                <div class="o_wsale_filmstrip_wrapper position-relative overflow-auto z-1">
+                    <ul
+                        class="o_wsale_filmstrip d-flex align-items-stretch mb-0 list-unstyled overflow-visible"
+                        role="menu"
+                        aria-label="Categories"
+                    >
+                        <li role="presentation">
+                            <a
+                                t-att-href="'/shop'"
+                                class="o_wsale_filmstrip_link d-block w-100 h-100 text-decoration-none"
+                                draggable="false"
+                                role="menuitem"
+                                aria-label="All Products"
+                            >
+                                <div class="o_wsale_filmstrip_item position-relative d-flex w-100 h-100">
+                                    <div
+                                        name="o_wsale_filmstrip_placeholder"
+                                        class="o_wsale_filmstrip_image o_wsale_filmstrip_placeholder oe_img_bg o_bg_img_center rounded"
+                                        role="img"
+                                        aria-label="Category image"
+                                    />
+                                    <span>All Products</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li
+                            t-foreach="categories"
+                            t-as="c"
+                            t-att-data-publish="c.has_published_products and 'on' or 'off'"
+                            role="presentation"
+                        >
+                            <a
+                                t-att-href="'/shop/category/%s' % slug(c)"
+                                class="o_wsale_filmstrip_link d-block w-100 h-100 text-decoration-none"
+                                draggable="false"
+                                role="menuitem"
+                                t-att-aria-label="c.name"
+                            >
+                                <div class="o_wsale_filmstrip_item position-relative d-flex w-100 h-100">
+                                    <div
+                                        t-if="c.image_128"
+                                        name="o_wsale_filmstrip_image"
+                                        class="o_wsale_filmstrip_image oe_img_bg o_bg_img_center rounded"
+                                        t-attf-style="background-image:url('data:image/png;base64, #{c.image_128}')"
+                                        t-att-alt="c.name"
+                                        role="img"
+                                        aria-label="Category image"
+                                    />
+                                    <div
+                                        t-else=""
+                                        name="o_wsale_filmstrip_placeholder"
+                                        class="o_wsale_filmstrip_image o_wsale_filmstrip_placeholder oe_img_bg o_bg_img_center rounded"
+                                        role="img"
+                                        aria-label="Category image"
+                                    />
+                                    <span t-field="c.name" />
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

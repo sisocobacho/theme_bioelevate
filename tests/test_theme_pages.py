@@ -232,6 +232,54 @@ class TestThemePages(TransactionCase):
             "Expected Best Sellers section to be placed before Hero section.",
         )
 
+    def test_homepage_category_filmstrip_snippet_above_best_sellers(self):
+        """Verify homepage uses theme filmstrip snippet above Best Sellers without a section title."""
+        theme_view = self.env.ref("theme_bioelevate.theme_homepage_content")
+        arch = theme_view.arch or ""
+
+        self.assertIn(
+            't-call="theme_bioelevate.s_category_filmstrip_home"',
+            arch,
+            "Expected homepage to include theme category filmstrip snippet call.",
+        )
+        self.assertNotIn("Shop by Category", arch, "Expected category strip title to be removed.")
+        self.assertNotIn("t-set=\"keep\"", arch, "Expected homepage filmstrip to avoid keep helper.")
+
+        category_strip_index = arch.find('t-call="theme_bioelevate.s_category_filmstrip_home"')
+        best_sellers_index = arch.find('data-name="Best Sellers"')
+        self.assertGreaterEqual(
+            category_strip_index,
+            0,
+            "Category Filmstrip section marker not found in homepage arch.",
+        )
+        self.assertGreaterEqual(
+            best_sellers_index,
+            0,
+            "Best Sellers section marker not found in homepage arch.",
+        )
+        self.assertLess(
+            category_strip_index,
+            best_sellers_index,
+            "Expected Category Filmstrip section to be placed before Best Sellers section.",
+        )
+
+    def test_homepage_category_filmstrip_template_uses_published_categories(self):
+        """Verify theme filmstrip template uses shop-like DOM and published category filtering."""
+        filmstrip_view = self.env.ref("theme_bioelevate.s_category_filmstrip_home")
+        arch = filmstrip_view.arch or ""
+
+        self.assertIn('data-snippet="s_category_filmstrip_home"', arch)
+        self.assertIn('data-name="Category Filmstrip"', arch)
+        self.assertNotIn('t-if="categories" id="o_wsale_categories_filmstrip"', arch)
+        self.assertIn("o_wsale_filmstrip_container", arch)
+        self.assertIn("o_wsale_filmstrip_item", arch)
+        self.assertIn("o_wsale_filmstrip_pills", arch)
+        self.assertNotIn("o_wsale_filmstrip_default", arch)
+        self.assertIn("('has_published_products', '=', True)", arch)
+        self.assertIn("('website_id', 'in', [False, request.env['website'].get_current_website().id])", arch)
+        self.assertIn('t-att-href="\'/shop\'"', arch)
+        self.assertIn("slug(c)", arch)
+
     def test_footer_sections_in_theme_view(self):
         """Verify provider footer content is present in the theme footer view."""
         footer_view = self.env.ref("theme_bioelevate.theme_footer_content")

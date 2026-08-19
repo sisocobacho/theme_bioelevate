@@ -3,6 +3,7 @@
     <template id="snippets" inherit_id="website.snippets" name="BioElevate Theme Snippets">
         <xpath expr="//snippets[@id='snippet_structure']" position="inside">
             <t t-snippet="website.s_text_block" />
+            <t t-snippet="theme_bioelevate.s_category_filmstrip_home" string="Category Filmstrip" />
         </xpath>
     </template>
 </odoo>

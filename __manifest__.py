@@ -30,6 +30,7 @@
         "views/portal_templates.xml",
         "data/website_configurator_disable.xml",
         "data/theme_favicon.xml",
+        "views/snippets/category_filmstrip.xml",
         "views/snippets/snippets.xml",
     ],
     "demo": [],
