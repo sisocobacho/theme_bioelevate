@@ -14,6 +14,7 @@
     ],
     "data": [
         "data/website.xml",
+        "data/product_tags.xml",
         "data/images.xml",
         "data/theme_header.xml",
         "data/theme_header_settings.xml",

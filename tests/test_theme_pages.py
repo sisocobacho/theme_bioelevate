@@ -152,6 +152,86 @@ class TestThemePages(TransactionCase):
                 f"Homepage theme view is missing expected fragment '{fragment}'.",
             )
 
+    def test_homepage_best_seller_tag_record_exists(self):
+        """Verify best_seller product.tag data record is loaded."""
+        best_seller_tag = self.env.ref(
+            "theme_bioelevate.product_tag_best_seller",
+            raise_if_not_found=False,
+        )
+        self.assertIsNotNone(
+            best_seller_tag,
+            "Expected product tag record theme_bioelevate.product_tag_best_seller.",
+        )
+        self.assertEqual(
+            best_seller_tag.name,
+            "best_seller",
+            "Expected best seller product tag name to be 'best_seller'.",
+        )
+
+    def test_homepage_best_sellers_dynamic_snippet_is_top_and_configured(self):
+        """Verify top homepage dynamic snippet is Best Sellers and tag-filtered by default."""
+        theme_view = self.env.ref("theme_bioelevate.theme_homepage_content")
+        arch = theme_view.arch or ""
+
+        self.assertIn(
+            'data-snippet="s_dynamic_snippet_products"',
+            arch,
+            "Expected homepage to include s_dynamic_snippet_products snippet.",
+        )
+        self.assertIn(
+            'data-name="Best Sellers"',
+            arch,
+            "Expected homepage snippet section to be named Best Sellers.",
+        )
+        self.assertIn(
+            "<h2 class=\"h3\">Best Sellers</h2>",
+            arch,
+            "Expected dynamic snippet title to be Best Sellers.",
+        )
+        self.assertNotIn(
+            "Our latest content",
+            arch,
+            "Default dynamic snippet title should be replaced.",
+        )
+        self.assertNotIn(
+            "Check out what's new in our company !",
+            arch,
+            "Default dynamic snippet subtitle should be removed.",
+        )
+        self.assertIn(
+            "data-product-tag-ids",
+            arch,
+            "Expected dynamic snippet to set default product tag filter in dataset.",
+        )
+        self.assertIn(
+            "request.env.ref('theme_bioelevate.product_tag_best_seller').id",
+            arch,
+            "Expected dynamic snippet tag dataset to reference best_seller tag xmlid.",
+        )
+        self.assertIn(
+            "request.env.ref('website_sale.dynamic_filter_newest_products').id",
+            arch,
+            "Expected dynamic snippet to use website_sale newest products dynamic filter.",
+        )
+
+        best_sellers_index = arch.find('data-name="Best Sellers"')
+        hero_index = arch.find('data-name="Hero"')
+        self.assertGreaterEqual(
+            best_sellers_index,
+            0,
+            "Best Sellers section marker not found in homepage arch.",
+        )
+        self.assertGreaterEqual(
+            hero_index,
+            0,
+            "Hero section marker not found in homepage arch.",
+        )
+        self.assertLess(
+            best_sellers_index,
+            hero_index,
+            "Expected Best Sellers section to be placed before Hero section.",
+        )
+
     def test_footer_sections_in_theme_view(self):
         """Verify provider footer content is present in the theme footer view."""
         footer_view = self.env.ref("theme_bioelevate.theme_footer_content")

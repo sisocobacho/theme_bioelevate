@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="product_tag_best_seller" model="product.tag">
+            <field name="name">best_seller</field>
+        </record>
+    </data>
+</odoo>
