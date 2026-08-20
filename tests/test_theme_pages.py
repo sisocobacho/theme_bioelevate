@@ -26,17 +26,16 @@ class TestThemePages(TransactionCase):
         manifest = get_manifest("theme_bioelevate")
         self.assertIsNotNone(manifest, "Module theme_bioelevate is not installed.")
 
-    def test_homepage_url_points_to_shop(self):
-        """Verify website homepage URL is configured to shop route."""
+    def test_homepage_url_uses_native_root_behavior(self):
+        """Verify website homepage_url is not forced so native '/' homepage is used."""
         website = self.env.ref("website.default_website")
-        self.assertEqual(
+        self.assertFalse(
             website.homepage_url,
-            "/shop",
-            "Expected website.default_website homepage_url to be '/shop'.",
+            "Expected website.default_website homepage_url to be unset/False.",
         )
 
-    def test_old_homepage_available_at_home_url(self):
-        """Verify the original homepage page is moved to /home."""
+    def test_homepage_available_at_root_url(self):
+        """Verify website.homepage page is available at '/'."""
         website = self.env.ref("website.default_website")
         homepage_page = self.env["website.page"].search(
             [
@@ -48,12 +47,12 @@ class TestThemePages(TransactionCase):
         self.assertTrue(homepage_page, "Expected homepage page for default website.")
         self.assertEqual(
             homepage_page.url,
-            "/home",
-            "Expected website.homepage_page URL to be '/home'.",
+            "/",
+            "Expected website.homepage page URL to be '/'.",
         )
 
-    def test_home_menu_points_to_home_url(self):
-        """Verify main Home menu points to /home on the default website."""
+    def test_home_menu_points_to_root_url(self):
+        """Verify main Home menu points to '/' on the default website."""
         website = self.env.ref("website.default_website")
         home_menu = self.env["website.menu"].search(
             [
@@ -65,8 +64,8 @@ class TestThemePages(TransactionCase):
         self.assertTrue(home_menu, "Expected a 'Home' menu on the default website.")
         self.assertEqual(
             home_menu.url,
-            "/home",
-            "Expected Home menu URL to be '/home'.",
+            "/",
+            "Expected Home menu URL to be '/'.",
         )
 
     def test_theme_homepage_view_exists(self):
@@ -512,7 +511,7 @@ class TestThemePages(TransactionCase):
             "Returns and Refunds Policy",
             "/terms",
             "Terms and Conditions",
-            "/home#contact-section",
+            "/#contact-section",
             "Contact Us",
             "orders@bioelevate.org",
             "partners@bioelevate.org",
@@ -582,9 +581,9 @@ class TestThemePages(TransactionCase):
             "Expected CTA override to inherit from website.header_call_to_action.",
         )
         self.assertIn(
-            "/home#contact-section",
+            "/#contact-section",
             cta_view.arch or "",
-            "Expected header CTA href to target /home#contact-section.",
+            "Expected header CTA href to target /#contact-section.",
         )
 
     def test_website_configurator_todo_marked_done(self):

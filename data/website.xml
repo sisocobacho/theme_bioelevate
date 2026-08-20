@@ -7,15 +7,15 @@
         </record>
         <function model="website" name="write">
             <function model="website" name="search" eval="[[('id', '=', ref('website.default_website'))]]" />
-            <value eval="{'homepage_url': '/shop'}" />
+            <value eval="{'homepage_url': False}" />
         </function>
         <function model="website.page" name="write">
             <function model="website.page" name="search" eval="[[('website_id', '=', ref('website.default_website')), ('key', '=', 'website.homepage')]]" />
-            <value eval="{'url': '/home'}" />
+            <value eval="{'url': '/'}" />
         </function>
         <function model="website.menu" name="write">
             <function model="website.menu" name="search" eval="[[('website_id', '=', ref('website.default_website')), ('name', '=', 'Home')]]" />
-            <value eval="{'url': '/home'}" />
+            <value eval="{'url': '/'}" />
         </function>
     </data>
     <data noupdate="1">
