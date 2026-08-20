@@ -397,14 +397,14 @@ class TestThemePages(TransactionCase):
             "Expected website configurator todo to be marked done for theme_bioelevate.",
         )
 
-    def test_shop_page_condensed_design_config(self):
-        """Verify shop page uses condensed list design with editor settings."""
+    def test_shop_page_thumbnails_catalog_design_config(self):
+        """Verify shop page uses thumbnails catalog design with editor settings."""
         website = self.env.ref("website.default_website")
 
         self.assertEqual(
             website.shop_ppr,
             4,
-            "Expected shop_ppr=4 (Chips design).",
+            "Expected shop_ppr=4 (thumbnails catalog design).",
         )
         self.assertEqual(
             website.shop_ppg,
@@ -413,8 +413,8 @@ class TestThemePages(TransactionCase):
         )
         self.assertEqual(
             website.shop_gap,
-            "4px",
-            "Expected shop_gap=4px (Condensed design).",
+            "16px",
+            "Expected shop_gap=16px (thumbnails catalog design).",
         )
         self.assertEqual(
             website.shop_page_container,
@@ -424,33 +424,45 @@ class TestThemePages(TransactionCase):
 
         design_classes = (website.shop_opt_products_design_classes or "").strip().split()
         expected_classes = [
+            "o_wsale_products_opt_layout_catalog",
+            "o_wsale_products_opt_design_thumbs",
             "o_wsale_products_opt_name_color_regular",
             "o_wsale_products_opt_thumb_cover",
+            "o_wsale_products_opt_img_secondary_show",
+            "o_wsale_products_opt_img_hover_zoom_out_light",
             "o_wsale_products_opt_has_cta",
             "o_wsale_products_opt_has_wishlist",
-            "o_wsale_products_opt_actions_inline",
-            "o_wsale_products_opt_actions_promote",
-            "o_wsale_products_opt_layout_list",
-            "o_wsale_products_opt_design_condensed",
-            "o_wsale_products_opt_cc",
-            "o_wsale_products_opt_cc1",
-            "o_wsale_products_opt_rounded_1",
-            "o_wsale_products_opt_name_size_body",
+            "o_wsale_products_opt_has_comparison",
+            "o_wsale_products_opt_actions_onhover",
+            "o_wsale_products_opt_wishlist_fixed",
+            "o_wsale_products_opt_actions_subtle",
+            "o_wsale_products_opt_rounded_2",
+            "o_wsale_products_opt_has_description",
         ]
         for cls in expected_classes:
             self.assertIn(
                 cls,
                 design_classes,
-                f"Missing condensed design class '{cls}' in shop_opt_products_design_classes.",
+                f"Missing thumbnails catalog design class '{cls}' in shop_opt_products_design_classes.",
             )
 
         self.assertNotIn(
-            "o_wsale_products_opt_design_chips",
+            "o_wsale_products_opt_layout_list",
             design_classes,
-            "Expected chips design class to be absent for condensed design.",
+            "Expected list layout class to be absent for catalog thumbnails design.",
+        )
+        self.assertNotIn(
+            "o_wsale_products_opt_design_condensed",
+            design_classes,
+            "Expected condensed design class to be absent for catalog thumbnails design.",
+        )
+        self.assertNotIn(
+            "o_wsale_products_opt_actions_promote",
+            design_classes,
+            "Expected promote actions class to be absent for catalog thumbnails design.",
         )
 
-        # Condensed preset keeps cover mode; only explicit thumb ratio classes should be absent.
+        # Thumbnails preset keeps cover mode; explicit ratio classes are user-selectable and not defaulted.
         ratio_classes = [
             c
             for c in design_classes
@@ -458,7 +470,7 @@ class TestThemePages(TransactionCase):
         ]
         self.assertFalse(
             ratio_classes,
-            f"Expected no thumb ratio classes for condensed preset, found: {ratio_classes}",
+            f"Expected no thumb ratio classes for thumbnails preset, found: {ratio_classes}",
         )
 
     def test_shop_page_views_enabled(self):
@@ -483,47 +495,19 @@ class TestThemePages(TransactionCase):
                 f"Expected {xml_id} to be disabled.",
             )
 
-    def test_shop_hides_product_images(self):
-        """Verify the shop template marks product grid as image-hidden."""
-        hide_images_view = self.env.ref("theme_bioelevate.theme_shop_hide_product_images")
-        self.assertEqual(
-            hide_images_view._name,
-            "theme.ir.ui.view",
-            "Expected shop image toggle to be a theme.ir.ui.view.",
+    def test_shop_does_not_hide_product_images(self):
+        """Verify shop image-hiding theme view is not loaded."""
+        hide_images_view = self.env.ref(
+            "theme_bioelevate.theme_shop_hide_product_images",
+            raise_if_not_found=False,
         )
-        self.assertEqual(
-            hide_images_view.inherit_id.id,
-            self.env.ref("website_sale.products").id,
-            "Expected shop image toggle to inherit website_sale.products.",
-        )
-        self.assertIn(
-            "theme_bioelevate_no_product_images",
-            hide_images_view.arch or "",
-            "Expected theme_bioelevate_no_product_images class in shop view override.",
+        self.assertFalse(
+            hide_images_view,
+            "Expected no theme view to hide product images on the shop page.",
         )
 
-    def test_shop_image_hidden_css_exists(self):
-        """Verify theme SCSS includes rule to hide shop product images."""
-        from odoo.tools.misc import file_path
-
-        module_path = file_path("theme_bioelevate")
-        scss_path = os.path.join(module_path, "static", "src", "scss", "shop_overrides.scss")
-        with open(scss_path, "r", encoding="utf-8") as scss_file:
-            scss_content = scss_file.read()
-
-        self.assertIn(
-            ".theme_bioelevate_no_product_images",
-            scss_content,
-            "Expected shop_overrides.scss to scope shop image-hiding styles.",
-        )
-        self.assertIn(
-            ".oe_product_image",
-            scss_content,
-            "Expected shop_overrides.scss to target product image container.",
-        )
-
-    def test_shop_condensed_option_enabled_in_scss_customization(self):
-        """Verify shop condensed design option is enabled in user_values.scss."""
+    def test_shop_thumbnails_option_enabled_in_scss_customization(self):
+        """Verify shop thumbnails catalog design option is enabled in user_values.scss."""
         website = self.env.ref("website.default_website")
         custom_url = "/_custom/web.assets_frontend/website/static/src/scss/options/user_values.scss"
         attachment = self.env["ir.attachment"].search(
@@ -544,14 +528,14 @@ class TestThemePages(TransactionCase):
             "Expected shop-page-opt-products-design-classes in user_values.scss.",
         )
         self.assertIn(
-            "o_wsale_products_opt_design_condensed",
+            "o_wsale_products_opt_design_thumbs",
             scss_content,
-            "Expected condensed design class in user_values.scss customization.",
+            "Expected thumbnails design class in user_values.scss customization.",
         )
         self.assertNotIn(
-            "o_wsale_products_opt_design_chips",
+            "o_wsale_products_opt_design_condensed",
             scss_content,
-            "Expected chips design class to be absent in user_values.scss customization.",
+            "Expected condensed design class to be absent in user_values.scss customization.",
         )
 
     def test_legal_compliance_page_exists(self):

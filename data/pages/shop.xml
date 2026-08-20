@@ -23,16 +23,16 @@
             <value eval="'website_sale.products_mobile_cols_single'" />
         </function>
 
-        <!-- Product list: condensed design preset from website editor -->
+        <!-- Product list: thumbnails catalog design preset from website editor -->
         <function model="website" name="write">
             <function model="website" name="search" eval="[[('id', '=', ref('website.default_website'))]]" />
-            <value eval="{'shop_ppg': 40, 'shop_ppr': 4, 'shop_gap': '4px', 'shop_page_container': 'regular', 'shop_opt_products_design_classes': 'o_wsale_products_opt_name_color_regular o_wsale_products_opt_thumb_cover o_wsale_products_opt_has_cta o_wsale_products_opt_has_wishlist o_wsale_products_opt_actions_inline o_wsale_products_opt_cc o_wsale_products_opt_cc1 o_wsale_products_opt_rounded_1 o_wsale_products_opt_actions_promote o_wsale_products_opt_name_size_body o_wsale_products_opt_layout_list o_wsale_products_opt_design_condensed'}" />
+            <value eval="{'shop_ppg': 40, 'shop_ppr': 4, 'shop_gap': '16px', 'shop_page_container': 'regular', 'shop_opt_products_design_classes': 'o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_thumb_cover o_wsale_products_opt_img_secondary_show o_wsale_products_opt_img_hover_zoom_out_light o_wsale_products_opt_has_cta o_wsale_products_opt_has_wishlist o_wsale_products_opt_has_comparison o_wsale_products_opt_actions_onhover o_wsale_products_opt_wishlist_fixed o_wsale_products_opt_actions_subtle o_wsale_products_opt_rounded_2 o_wsale_products_opt_has_description'}" />
         </function>
 
         <function model="website.assets" name="make_scss_customization">
-            <value eval="'/website/static/src/scss/options/user_values.scss'" />
-            <value
-                eval="{'shop-page-opt-products-design-classes': 'o_wsale_products_opt_name_color_regular o_wsale_products_opt_thumb_cover o_wsale_products_opt_has_cta o_wsale_products_opt_has_wishlist o_wsale_products_opt_actions_inline o_wsale_products_opt_cc o_wsale_products_opt_cc1 o_wsale_products_opt_rounded_1 o_wsale_products_opt_actions_promote o_wsale_products_opt_name_size_body o_wsale_products_opt_layout_list o_wsale_products_opt_design_condensed'}" />
+                <value eval="'/website/static/src/scss/options/user_values.scss'" />
+                <value
+                eval="{'shop-page-opt-products-design-classes': 'o_wsale_products_opt_layout_catalog o_wsale_products_opt_design_thumbs o_wsale_products_opt_name_color_regular o_wsale_products_opt_thumb_cover o_wsale_products_opt_img_secondary_show o_wsale_products_opt_img_hover_zoom_out_light o_wsale_products_opt_has_cta o_wsale_products_opt_has_wishlist o_wsale_products_opt_has_comparison o_wsale_products_opt_actions_onhover o_wsale_products_opt_wishlist_fixed o_wsale_products_opt_actions_subtle o_wsale_products_opt_rounded_2 o_wsale_products_opt_has_description'}" />
         </function>
 
     </data>

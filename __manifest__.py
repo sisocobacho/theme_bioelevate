@@ -24,7 +24,6 @@
         "data/pages/policies.xml",
         "data/pages/shop.xml",
         "data/pages/product_page.xml",
-        "views/shop_templates.xml",
         "data/theme_palette.xml",
         "data/theme_footer.xml",
         "views/portal_templates.xml",
@@ -40,9 +39,6 @@
     "assets": {
         "web._assets_primary_variables": [
             "theme_bioelevate/static/src/scss/primary_variables.scss",
-        ],
-        "web.assets_frontend": [
-            "theme_bioelevate/static/src/scss/shop_overrides.scss",
         ],
     },
     "pre_init_hook": "pre_init_hook",
