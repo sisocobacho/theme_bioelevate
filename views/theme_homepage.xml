@@ -136,16 +136,11 @@
                                 <!-- Left Column: Intro -->
                                 <div class="col-lg-7 pb48 o_colored_level">
                                     <!-- Eyebrow Badge -->
-                                    <span
-                                        class="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mb-4 px-3 py-2">
-                                        <span class="fa fa-circle " style="font-size: xx-small;" />
-                                        For licensed clinics &amp; professional distributors </span>
-                                    <h1 class="display-3 mb-4">Premium peptide products for clinical <em>
-                                        professionals.</em></h1>
-                                    <p class="lead mb-5">BioElevate supplies high-purity
-                                        peptide products to licensed clinics, medical professionals,
-                                        and qualified distributors across the US, Latin America, and
-                                        the Caribbean.</p>
+                                    <h1 class="display-3 mb-4">Premium Peptide Products for Everyday
+                                        Wellness</h1>
+                                    <p class="lead mb-5">BioElevate offers high-purity peptide
+                                        products for people who care about quality and results —
+                                        trusted across the US, Latin America, and the Caribbean.</p>
                                     <p>
                                         <a class="btn btn-primary btn-lg" href="/shop">Browse
                                             Products</a>

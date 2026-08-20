@@ -127,8 +127,8 @@ class TestThemePages(TransactionCase):
             )
 
         expected_fragments = [
-            "Premium peptide products for clinical",
-            "For licensed clinics",
+            "Premium Peptide Products for Everyday Wellness",
+            "products for people who care about quality and results",
             "Quality Standards",
             "&gt;= 99% purity",
             "Cold-chain delivery",
@@ -397,8 +397,8 @@ class TestThemePages(TransactionCase):
             "Expected ES infographic section to be placed before Hero.",
         )
 
-    def test_spanish_translation_file_has_no_empty_msgstr_entries(self):
-        """Verify es.po has no empty msgstr entries except the PO header."""
+    def test_spanish_translation_file_contains_updated_hero_translations(self):
+        """Verify es.po contains updated hero translations and no stale hero source terms."""
         from odoo.tools.misc import file_path
 
         module_path = file_path("theme_bioelevate")
@@ -406,12 +406,30 @@ class TestThemePages(TransactionCase):
         with open(po_path, "r", encoding="utf-8") as po_file:
             po_content = po_file.read()
 
-        empty_msgstr_lines = re.findall(r'^msgstr ""$', po_content, flags=re.MULTILINE)
-        self.assertEqual(
-            len(empty_msgstr_lines),
-            1,
-            "Expected only the PO header msgstr to be empty in i18n/es.po.",
-        )
+        expected_terms = [
+            "Premium Peptide Products for Everyday",
+            "BioElevate offers high-purity peptide",
+            "Productos peptidicos premium para el bienestar",
+            "con confianza en EE. UU., America Latina y el Caribe.",
+        ]
+        for term in expected_terms:
+            self.assertIn(
+                term,
+                po_content,
+                f"Expected updated hero translation term {term!r} in i18n/es.po.",
+            )
+
+        stale_terms = [
+            "For licensed clinics &amp; professional distributors",
+            "Premium peptide products for clinical <em>",
+            "BioElevate supplies high-purity",
+        ]
+        for term in stale_terms:
+            self.assertNotIn(
+                term,
+                po_content,
+                f"Found stale hero source term {term!r} in i18n/es.po.",
+            )
 
     def test_homepage_category_filmstrip_snippet_above_best_sellers(self):
         """Verify homepage uses theme filmstrip snippet above Best Sellers without a section title."""
