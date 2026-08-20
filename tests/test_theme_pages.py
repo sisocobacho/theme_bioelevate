@@ -232,6 +232,71 @@ class TestThemePages(TransactionCase):
             "Expected Best Sellers section to be placed before Hero section.",
         )
 
+    def test_homepage_infographic_attachment_exists(self):
+        """Verify infographic image attachment is registered in theme data."""
+        infographic_attachment = self.env.ref(
+            "theme_bioelevate.img_infog_bioelevate_en",
+            raise_if_not_found=False,
+        )
+        self.assertIsNotNone(
+            infographic_attachment,
+            "Expected infographic image attachment to exist.",
+        )
+        self.assertEqual(
+            infographic_attachment.url,
+            "/theme_bioelevate/static/src/img/Infog_bioelevate_EN.jpg.jpeg",
+            "Expected infographic attachment URL to point to the theme static image.",
+        )
+
+    def test_homepage_infographic_section_after_best_sellers_and_without_text(self):
+        """Verify homepage has image-only infographic snippet right after Best Sellers."""
+        theme_view = self.env.ref("theme_bioelevate.theme_homepage_content")
+        arch = theme_view.arch or ""
+
+        self.assertIn(
+            'data-snippet="s_picture"',
+            arch,
+            "Expected homepage to include a s_picture snippet section for infographic.",
+        )
+        self.assertIn(
+            'data-name="BioElevate Infographic"',
+            arch,
+            "Expected infographic section data-name to be BioElevate Infographic.",
+        )
+        self.assertIn(
+            "/web/image/theme_bioelevate.img_infog_bioelevate_en",
+            arch,
+            "Expected infographic section image to use the theme attachment URL.",
+        )
+        self.assertNotIn(
+            "Step Up Your Game",
+            arch,
+            "Expected default s_picture heading to be removed for image-only snippet.",
+        )
+        self.assertNotIn(
+            "Where innovation meets performance",
+            arch,
+            "Expected default s_picture caption to be removed for image-only snippet.",
+        )
+
+        best_sellers_index = arch.find('data-name="Best Sellers"')
+        infographic_index = arch.find('data-name="BioElevate Infographic"')
+        hero_index = arch.find('data-name="Hero"')
+
+        self.assertGreaterEqual(best_sellers_index, 0, "Best Sellers section marker not found.")
+        self.assertGreaterEqual(infographic_index, 0, "Infographic section marker not found.")
+        self.assertGreaterEqual(hero_index, 0, "Hero section marker not found.")
+        self.assertLess(
+            best_sellers_index,
+            infographic_index,
+            "Expected infographic section to be placed after Best Sellers.",
+        )
+        self.assertLess(
+            infographic_index,
+            hero_index,
+            "Expected infographic section to be placed before Hero.",
+        )
+
     def test_homepage_category_filmstrip_snippet_above_best_sellers(self):
         """Verify homepage uses theme filmstrip snippet above Best Sellers without a section title."""
         theme_view = self.env.ref("theme_bioelevate.theme_homepage_content")

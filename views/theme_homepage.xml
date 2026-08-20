@@ -82,6 +82,21 @@
                         </div>
                     </section>
 
+                    <section class="s_picture pt48 pb48" data-snippet="s_picture"
+                        data-name="BioElevate Infographic">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12" style="text-align: center;">
+                                    <figure class="figure w-100 mb-0">
+                                        <img src="/web/image/theme_bioelevate.img_infog_bioelevate_en"
+                                            class="figure-img img-fluid rounded"
+                                            alt="BioElevate infographic" />
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <!-- ============================================================
                          SECTION 1: HERO (No Background Image)
                          Two columns: Left = intro text, Right = Quality Standards panel

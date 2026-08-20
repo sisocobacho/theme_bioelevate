@@ -43,5 +43,11 @@
             <field name="type">url</field>
             <field name="url">/theme_bioelevate/static/src/img/cat_pharma.jpg</field>
         </record>
+        <record id="img_infog_bioelevate_en" model="ir.attachment">
+            <field name="public" eval="True" />
+            <field name="name">Infog_bioelevate_EN.jpg.jpeg</field>
+            <field name="type">url</field>
+            <field name="url">/theme_bioelevate/static/src/img/Infog_bioelevate_EN.jpg.jpeg</field>
+        </record>
     </data>
 </odoo>
