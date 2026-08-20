@@ -1,0 +1,1261 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* theme_bioelevate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-20 16:13+0000\n"
+"PO-Revision-Date: 2026-08-20 16:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<select class=\"form-select s_website_form_input\" id=\"bioelevate_contact_inquiry\" name=\"inquiry_type\">\n"
+"                                                                    <option value=\"\">Select...</option>\n"
+"                                                                    <option value=\"pricing\">Product\n"
+"                                                                        availability &amp; pricing</option>\n"
+"                                                                    <option value=\"distribution\">Distribution\n"
+"                                                                        partnership</option>\n"
+"                                                                    <option value=\"coa\">COA or\n"
+"                                                                        documentation request</option>\n"
+"                                                                    <option value=\"order_support\">Order\n"
+"                                                                        support</option>\n"
+"                                                                    <option value=\"other\">Other</option>\n"
+"                                                                </select>"
+msgstr "<select class=\"form-select s_website_form_input\" id=\"bioelevate_contact_inquiry\" name=\"inquiry_type\">\n"
+"                                                                    <option value=\"\">Seleccionar...</option>\n"
+"                                                                    <option value=\"pricing\">Disponibilidad\n"
+"                                                                        y precios de productos</option>\n"
+"                                                                    <option value=\"distribution\">Alianza de\n"
+"                                                                        distribucion</option>\n"
+"                                                                    <option value=\"coa\">Solicitud de COA\n"
+"                                                                        o documentacion</option>\n"
+"                                                                    <option value=\"order_support\">Soporte\n"
+"                                                                        de pedidos</option>\n"
+"                                                                    <option value=\"other\">Otro</option>\n"
+"                                                                </select>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mb-4 px-3 py-2\">\n"
+"                                        <span class=\"fa fa-circle \" style=\"font-size: xx-small;\"/>\n"
+"                                        For licensed clinics &amp; professional distributors </span>"
+msgstr "<span class=\"badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mb-4 px-3 py-2\">\n"
+"                                        <span class=\"fa fa-circle \" style=\"font-size: xx-small;\"/>\n"
+"                                        Para clinicas autorizadas y distribuidores profesionales </span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-file-text-o text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">Lot-specific COA included</span>"
+msgstr "<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-file-text-o text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">Incluye COA por lote</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-flask text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">&gt;= 99% purity, every\n"
+"                                                lot</span>"
+msgstr "<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-flask text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">&gt;= 99% de pureza, en cada\n"
+"                                                lote</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-globe text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">US - LATAM - Caribbean</span>"
+msgstr "<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-globe text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">EE. UU. - LATAM - Caribe</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-lock text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">Verified professionals\n"
+"                                                only</span>"
+msgstr "<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-lock text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">Solo profesionales\n"
+"                                                verificados</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-snowflake-o text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">Cold-chain delivery\n"
+"                                                (2-8C)</span>"
+msgstr "<span class=\"d-flex align-items-center justify-content-center rounded-2 bg-body-tertiary\" style=\"width: 36px; height: 36px;\">\n"
+"                                                <i class=\"fa fa-snowflake-o text-primary\"/>\n"
+"                                            </span>\n"
+"                                            <span class=\"small text-muted\">Entrega con cadena de frio\n"
+"                                                (2-8C)</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"display-4 fw-bold text-primary d-block mb-2\">\n"
+"                                                        3</span>\n"
+"                                                    <span class=\"small text-muted\">Product formats:\n"
+"                                                        vials, capsules, blends</span>"
+msgstr "<span class=\"display-4 fw-bold text-primary d-block mb-2\">\n"
+"                                                        3</span>\n"
+"                                                    <span class=\"small text-muted\">Formatos de producto:\n"
+"                                                        viales, capsulas, mezclas</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"display-4 fw-bold text-primary d-block mb-2\">\n"
+"                                                        60+</span>\n"
+"                                                    <span class=\"small text-muted\">Peptide compounds\n"
+"                                                        across 3 formats</span>"
+msgstr "<span class=\"display-4 fw-bold text-primary d-block mb-2\">\n"
+"                                                        60+</span>\n"
+"                                                    <span class=\"small text-muted\">Compuestos peptidicos\n"
+"                                                        en 3 formatos</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"display-4 fw-bold text-primary d-block mb-2\">\n"
+"                                                        99%</span>\n"
+"                                                    <span class=\"small text-muted\">Minimum purity on\n"
+"                                                        every product</span>"
+msgstr "<span class=\"display-4 fw-bold text-primary d-block mb-2\">\n"
+"                                                        99%</span>\n"
+"                                                    <span class=\"small text-muted\">Pureza minima en\n"
+"                                                        cada producto</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"display-4 fw-bold text-primary d-block mb-2\">\n"
+"                                                        US+</span>\n"
+"                                                    <span class=\"small text-muted\">Serving US, LATAM\n"
+"                                                        &amp; Caribbean markets</span>"
+msgstr "<span class=\"display-4 fw-bold text-primary d-block mb-2\">\n"
+"                                                        US+</span>\n"
+"                                                    <span class=\"small text-muted\">Atendiendo mercados de EE. UU., LATAM\n"
+"                                                        y Caribe</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"s_website_form_label_content\">\n"
+"                                                                    Message</span>\n"
+"                                                                <span class=\"s_website_form_mark text-danger\">\n"
+"                                                                    *</span>"
+msgstr "<span class=\"s_website_form_label_content\">\n"
+"                                                                    Mensaje</span>\n"
+"                                                                <span class=\"s_website_form_mark text-danger\">\n"
+"                                                                    *</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"s_website_form_label_content\">Business\n"
+"                                                                    name</span>\n"
+"                                                                <span class=\"s_website_form_mark text-danger\">\n"
+"                                                                    *</span>"
+msgstr "<span class=\"s_website_form_label_content\">Nombre\n"
+"                                                                    de la empresa</span>\n"
+"                                                                <span class=\"s_website_form_mark text-danger\">\n"
+"                                                                    *</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"s_website_form_label_content\">Email\n"
+"                                                                    address</span>\n"
+"                                                                <span class=\"s_website_form_mark text-danger\">\n"
+"                                                                    *</span>"
+msgstr "<span class=\"s_website_form_label_content\">Direccion\n"
+"                                                                    de correo</span>\n"
+"                                                                <span class=\"s_website_form_mark text-danger\">\n"
+"                                                                    *</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"s_website_form_label_content\">Full\n"
+"                                                                    name</span>\n"
+"                                                                <span class=\"s_website_form_mark text-danger\">\n"
+"                                                                    *</span>"
+msgstr "<span class=\"s_website_form_label_content\">Nombre\n"
+"                                                                    completo</span>\n"
+"                                                                <span class=\"s_website_form_mark text-danger\">\n"
+"                                                                    *</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"s_website_form_label_content\">Inquiry\n"
+"                                                                    type</span>"
+msgstr "<span class=\"s_website_form_label_content\">Tipo\n"
+"                                                                    de consulta</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"text-muted\">Access</span>\n"
+"                                                    <span class=\"fw-semibold\">B2B - Verified Only</span>"
+msgstr "<span class=\"text-muted\">Acceso</span>\n"
+"                                                    <span class=\"fw-semibold\">B2B - Solo verificados</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"text-muted\">Certificate of Analysis</span>\n"
+"                                                    <span class=\"fw-semibold text-primary\">Included</span>"
+msgstr "<span class=\"text-muted\">Certificado de Analisis</span>\n"
+"                                                    <span class=\"fw-semibold text-primary\">Incluido</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"text-muted\">Endotoxin</span>\n"
+"                                                    <span class=\"fw-semibold\">&lt;= 1 EU/ml</span>"
+msgstr "<span class=\"text-muted\">Endotoxina</span>\n"
+"                                                    <span class=\"fw-semibold\">&lt;= 1 EU/ml</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"text-muted\">Identity Testing</span>\n"
+"                                                    <span class=\"fw-semibold\">MS Confirmed</span>"
+msgstr "<span class=\"text-muted\">Prueba de identidad</span>\n"
+"                                                    <span class=\"fw-semibold\">MS confirmado</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"text-muted\">Purity (HPLC)</span>\n"
+"                                                    <span class=\"fw-semibold text-primary\">&gt;= 99%</span>"
+msgstr "<span class=\"text-muted\">Pureza (HPLC)</span>\n"
+"                                                    <span class=\"fw-semibold text-primary\">&gt;= 99%</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"text-muted\">Storage</span>\n"
+"                                                    <span class=\"fw-semibold\">2-8C Cold-Chain</span>"
+msgstr "<span class=\"text-muted\">Almacenamiento</span>\n"
+"                                                    <span class=\"fw-semibold\">Cadena de frio 2-8C</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"text-uppercase text-muted small fw-bold d-block mb-3\" "
+"style=\"letter-spacing: 1.5px;\">About BioElevate</span>"
+msgstr "<span class=\"text-uppercase text-muted small fw-bold d-block mb-3\" style=\"letter-spacing: 1.5px;\">Sobre BioElevate</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"<span class=\"text-uppercase text-muted small fw-bold d-block mb-3\" "
+"style=\"letter-spacing: 1.5px;\">Get in Touch</span>"
+msgstr "<span class=\"text-uppercase text-muted small fw-bold d-block mb-3\" style=\"letter-spacing: 1.5px;\">Ponte en contacto</span>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.s_category_filmstrip_home
+msgid "<span>All Products</span>"
+msgstr "<span>Todos los productos</span>"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"Additionally, if you are a European resident, we note that we are processing"
+" your information in order to fulfill contracts we might have with you (for "
+"example, if you make an order through the Site), or otherwise to pursue our "
+"legitimate business interests listed above. Additionally, please note that "
+"your information might be transferred outside of Europe, including Canada "
+"and the United States."
+msgstr "Adicionalmente, si usted es residente europeo, le informamos que procesamos su informacion para cumplir contratos que podamos tener con usted (por ejemplo, si realiza un pedido a traves del Sitio), o de otro modo para perseguir nuestros intereses comerciales legitimos indicados anteriormente. Adicionalmente, tenga en cuenta que su informacion podria transferirse fuera de Europa, incluyendo Canada y los Estados Unidos."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.s_category_filmstrip_home
+msgid "All Products"
+msgstr "Todos los productos"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"All products are accompanied by a lot-specific\n"
+"                                                Certificate of Analysis. Access requires\n"
+"                                                professional credentials."
+msgstr "Todos los productos incluyen un\n"
+"                                                Certificado de Analisis especifico por lote. El acceso requiere\n"
+"                                                credenciales profesionales."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"All replacements are shipped free of charge using the same delivery method "
+"as your original order."
+msgstr "Todos los reemplazos se envian sin costo utilizando el mismo metodo de entrega que su pedido original."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"All sales are final. No refunds or cancellations once the order has been "
+"shipped."
+msgstr "Todas las ventas son finales. No hay reembolsos ni cancelaciones una vez que el pedido haya sido enviado."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"At BioElevate, we are committed to maintaining the highest standards of "
+"product quality, purity, and customer satisfaction. Because our peptides and"
+" research materials are sensitive, sterile, and temperature-dependent, we do"
+" not offer refunds or accept returns under any circumstances."
+msgstr "En BioElevate, estamos comprometidos con mantener los mas altos estandares de calidad del producto, pureza y satisfaccion del cliente. Debido a que nuestros peptidos y materiales de investigacion son sensibles, esteriles y dependientes de la temperatura, no ofrecemos reembolsos ni aceptamos devoluciones bajo ninguna circunstancia."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Best Sellers"
+msgstr "Mas vendidos"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "BioElevate"
+msgstr "BioElevate"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "BioElevate infographic"
+msgstr "Infografia de BioElevate"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"BioElevate sells exclusively to licensed medical\n"
+"                                                professionals, clinics, and qualified distributors.\n"
+"                                                We do not sell to the general public or to\n"
+"                                                individual patients."
+msgstr "BioElevate vende exclusivamente a profesionales medicos autorizados,\n"
+"                                                clinicas y distribuidores calificados.\n"
+"                                                No vendemos al publico general ni a\n"
+"                                                pacientes individuales."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"BioElevate supplies high-purity\n"
+"                                        peptide products to licensed clinics, medical professionals,\n"
+"                                        and qualified distributors across the US, Latin America, and\n"
+"                                        the Caribbean."
+msgstr "BioElevate suministra productos peptidicos de alta pureza\n"
+"                                        a clinicas autorizadas, profesionales medicos\n"
+"                                        y distribuidores calificados en EE. UU., America Latina y\n"
+"                                        el Caribe."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"BioElevate website is owned by BioElevate, which is a data controller of "
+"your personal data."
+msgstr "El sitio web de BioElevate es propiedad de BioElevate, que es el responsable del tratamiento de sus datos personales."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"Browse\n"
+"                                            Products"
+msgstr "Explorar\n"
+"                                            Productos"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"By submitting this form you confirm you are a\n"
+"                                                licensed medical professional or qualified business\n"
+"                                                representative. BioElevate does not accept\n"
+"                                                consumer or patient inquiries."
+msgstr "Al enviar este formulario, usted confirma que es un\n"
+"                                                profesional medico autorizado o representante comercial\n"
+"                                                calificado. BioElevate no acepta\n"
+"                                                consultas de consumidores ni de pacientes."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.s_category_filmstrip_home
+msgid "Categories"
+msgstr "Categorias"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.snippets
+msgid "Category Filmstrip"
+msgstr "Cinta de categorias"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.s_category_filmstrip_home
+msgid "Category image"
+msgstr "Imagen de categoria"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"Certificate of\n"
+"                                                    Analysis requests and product documentation."
+msgstr "Solicitudes de\n"
+"                                                    Certificado de Analisis y documentacion del producto."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid "Commitment to Quality"
+msgstr "Compromiso con la calidad"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Compoundable compounds - like NAD+ and\n"
+"                                                    Sermorelin - that can be legally prepared by\n"
+"                                                    licensed compounding pharmacies for individual\n"
+"                                                    patients with a valid prescription."
+msgstr "Compuestos formulables - como NAD+ y\n"
+"                                                    Sermorelin - que pueden ser preparados legalmente por\n"
+"                                                    farmacias de formulacion autorizadas para\n"
+"                                                    pacientes individuales con una receta valida."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "Contact Us"
+msgstr "Contactanos"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "Contact information"
+msgstr "Informacion de contacto"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid "Damaged, Defective, or Incorrect Orders"
+msgstr "Pedidos danados, defectuosos o incorrectos"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid "Disclaimer"
+msgstr "Descargo de responsabilidad"
+
+#. module: theme_bioelevate
+#: model:ir.model.fields,field_description:theme_bioelevate.field_website__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Distribution Partners"
+msgstr "Socios de distribucion"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Documentation &amp; COA"
+msgstr "Documentacion y COA"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid "Due to the nature of our products:"
+msgstr "Debido a la naturaleza de nuestros productos:"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Ensuring use only under licensed professional\n"
+"                                                    oversight where required."
+msgstr "Garantizar el uso solo bajo supervision\n"
+"                                                    profesional autorizada cuando sea requerido."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"Every product shipped by BioElevate is handled under strict laboratory, "
+"handling, and packaging standards to ensure sterility and integrity. We take"
+" great care to ensure each order arrives in perfect condition and are always"
+" available to help if any issue arises during shipping."
+msgstr "Cada producto enviado por BioElevate se manipula bajo estrictos estandares de laboratorio, manejo y empaque para garantizar esterilidad e integridad. Tenemos gran cuidado para asegurar que cada pedido llegue en condiciones perfectas y siempre estamos disponibles para ayudar si surge algun problema durante el envio."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Every product we supply is tested for purity\n"
+"                                                (&gt;=99% by HPLC), identity (mass spectrometry),\n"
+"                                                and endotoxin levels. You receive a lot-specific\n"
+"                                                Certificate of Analysis with every order. We do not\n"
+"                                                supply products that do not meet these standards."
+msgstr "Cada producto que suministramos se prueba para verificar pureza\n"
+"                                                (&gt;=99% por HPLC), identidad (espectrometria de masas)\n"
+"                                                y niveles de endotoxinas. Usted recibe un\n"
+"                                                Certificado de Analisis especifico por lote con cada pedido. No\n"
+"                                                suministramos productos que no cumplan estos estandares."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"FDA-approved finished drugs available only\n"
+"                                                    through authorized channels."
+msgstr "Medicamentos terminados aprobados por la FDA disponibles solo\n"
+"                                                    a traves de canales autorizados."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "First and last name"
+msgstr "Nombre y apellido"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"For any questions or concerns, please contact our support team at "
+"info@bioelevate.org. We will be happy to assist you promptly and "
+"professionally."
+msgstr "Para cualquier pregunta o inquietud, contacte a nuestro equipo de soporte en info@bioelevate.org. Estaremos encantados de ayudarle de forma rapida y profesional."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid ""
+"For licensed medical\n"
+"                                            professionals and qualified distributors only. Products\n"
+"                                            are not for consumer sale. All information is for\n"
+"                                            professional reference only and does not constitute\n"
+"                                            medical advice. Regulatory status of compounds is\n"
+"                                            subject to change - verify with qualified counsel before\n"
+"                                            ordering. © 2026 BioElevate."
+msgstr "Solo para profesionales medicos\n"
+"                                            autorizados y distribuidores calificados. Los productos\n"
+"                                            no son para venta al consumidor. Toda la informacion es\n"
+"                                            solo de referencia profesional y no constituye\n"
+"                                            consejo medico. El estado regulatorio de los compuestos\n"
+"                                            esta sujeto a cambios; verifique con asesoria calificada antes de\n"
+"                                            ordenar. © 2026 BioElevate."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Get in Touch"
+msgstr "Ponte en contacto"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "Home"
+msgstr "Inicio"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "How BioElevate collects, uses, and protects personal data."
+msgstr "Como BioElevate recopila, usa y protege los datos personales."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"How replacements are handled for sensitive, temperature-dependent products."
+msgstr "Como se gestionan los reemplazos para productos sensibles y dependientes de la temperatura."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"How the regulatory framework works\n"
+"                                                (simplified)"
+msgstr "Como funciona el marco regulatorio\n"
+"                                                (simplificado)"
+
+#. module: theme_bioelevate
+#: model:ir.model.fields,field_description:theme_bioelevate.field_website__id
+msgid "ID"
+msgstr "ID"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"If the tracking shows the order as delivered but you did not receive it, "
+"please notify us within 7 days. We will assist you in filing a claim with "
+"the carrier, but replacements for delivered packages will be handled on a "
+"case-by-case basis."
+msgstr "Si el seguimiento muestra que el pedido fue entregado pero usted no lo recibio, notifiquenos dentro de los 7 dias. Le ayudaremos a presentar un reclamo con el transportista, pero los reemplazos de paquetes marcados como entregados se manejaran caso por caso."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"If you are a European resident, you have the following rights related to "
+"your personal data:"
+msgstr "Si usted es residente europeo, tiene los siguientes derechos relacionados con sus datos personales:"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"If you would like to contact us to understand more about this Policy or wish"
+" to contact us concerning any matter relating to individual rights and your "
+"Personal Information, you may send an email to info@bioelevate.org."
+msgstr "Si desea contactarnos para entender mas sobre esta Politica o desea comunicarse con nosotros sobre cualquier asunto relacionado con derechos individuales y su Informacion Personal, puede enviar un correo electronico a info@bioelevate.org."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"If you would like to exercise this right, please contact us through the "
+"contact information below."
+msgstr "Si desea ejercer este derecho, contactenos a traves de la informacion de contacto a continuacion."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"If you're unsure about the regulatory requirements\n"
+"                                                for a specific product in your jurisdiction, we\n"
+"                                                recommend speaking with a qualified healthcare\n"
+"                                                attorney or regulatory consultant before ordering."
+msgstr "Si no esta seguro sobre los requisitos regulatorios\n"
+"                                                para un producto especifico en su jurisdiccion,\n"
+"                                                recomendamos hablar con un abogado de salud\n"
+"                                                calificado o un consultor regulatorio antes de ordenar."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"If your order is lost in transit or marked as undeliverable, we will work "
+"directly with the carrier to open an investigation. Once the shipment is "
+"confirmed as lost by the courier, a replacement order will be issued at no "
+"cost to you."
+msgstr "Si su pedido se pierde en transito o se marca como no entregable, trabajaremos directamente con el transportista para abrir una investigacion. Una vez que el envio sea confirmado como perdido por el mensajero, se emitira un pedido de reemplazo sin costo para usted."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"In the United States, peptide compounds fall into a\n"
+"                                                few categories:"
+msgstr "En los Estados Unidos, los compuestos peptidicos se dividen en\n"
+"                                                algunas categorias:"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"In the rare case that your order arrives damaged, defective, or incorrect, "
+"please contact our support team immediately at info@bioelevate.org."
+msgstr "En el caso poco frecuente de que su pedido llegue danado, defectuoso o incorrecto, contacte de inmediato a nuestro equipo de soporte en info@bioelevate.org."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "Information security"
+msgstr "Seguridad de la informacion"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "Legal"
+msgstr "Legal"
+
+#. module: theme_bioelevate
+#: model:website.menu,name:theme_bioelevate.menu_legal_compliance
+msgid "Legal & Compliance"
+msgstr "Legal y cumplimiento"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "Legal &amp; Compliance"
+msgstr "Legal y cumplimiento"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "Legal disclosure"
+msgstr "Divulgacion legal"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "Links to other websites"
+msgstr "Enlaces a otros sitios web"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid "Lost or Missing Packages"
+msgstr "Paquetes perdidos o faltantes"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Maintaining proper storage, handling, and\n"
+"                                                    cold-chain practices after receipt."
+msgstr "Mantener practicas adecuadas de almacenamiento, manejo y\n"
+"                                                    cadena de frio despues de la recepcion."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "Navigate"
+msgstr "Navegacion"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid "Non-Refundable Policy"
+msgstr "Politica sin reembolsos"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"Once your message is received, our team will review the issue and arrange "
+"for a free replacement of the affected item(s). We do not require customers "
+"to return damaged goods due to safety and sterility regulations."
+msgstr "Una vez recibido su mensaje, nuestro equipo revisara el caso y organizara un reemplazo gratuito del/los articulo(s) afectado(s). No exigimos a los clientes devolver productos danados debido a normas de seguridad y esterilidad."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Orders &amp; Products"
+msgstr "Pedidos y productos"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid "Orders cannot be modified or canceled once processing has begun."
+msgstr "Los pedidos no pueden modificarse ni cancelarse una vez que el procesamiento ha comenzado."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"Our catalog covers metabolic health,\n"
+"                                        tissue recovery, hormonal optimization, anti-aging, and\n"
+"                                        neurological support - in injectable vials, oral capsules,\n"
+"                                        and combination blends."
+msgstr "Nuestro catalogo cubre salud metabolica,\n"
+"                                        recuperacion de tejidos, optimizacion hormonal, antienvejecimiento y\n"
+"                                        soporte neurologico, en viales inyectables, capsulas orales\n"
+"                                        y mezclas combinadas."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid "Our quality commitment"
+msgstr "Nuestro compromiso de calidad"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"Our top priority is customer data security, and, as such, we may process "
+"only minimal user data, only as much as it is absolutely necessary to "
+"maintain the website. Information collected automatically is used only to "
+"identify potential cases of abuse and establish statistical information "
+"regarding website usage. This statistical information is not otherwise "
+"aggregated in such a way that it would identify any particular user of the "
+"system."
+msgstr "Nuestra principal prioridad es la seguridad de los datos de los clientes y, por ello, podemos procesar solo datos minimos del usuario, unicamente los absolutamente necesarios para mantener el sitio web. La informacion recopilada automaticamente se utiliza solo para identificar posibles casos de abuso y establecer informacion estadistica sobre el uso del sitio web. Esta informacion estadistica no se agrega de manera que identifique a ningun usuario en particular del sistema."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"Our website may contain links to other websites that are not owned or "
+"controlled by us. Please be aware that we are not responsible for such other"
+" websites or third parties' privacy practices. We encourage you to be aware "
+"when you leave our website and read the privacy statements of each website "
+"that may collect personal information."
+msgstr "Nuestro sitio web puede contener enlaces a otros sitios que no son de nuestra propiedad ni estan bajo nuestro control. Tenga en cuenta que no somos responsables de dichos sitios ni de las practicas de privacidad de terceros. Le recomendamos estar atento cuando salga de nuestro sitio web y leer las declaraciones de privacidad de cada sitio que pueda recopilar informacion personal."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Peptide-related products may be available through different regulatory pathways depending on the product type, intended use, and jurisdiction.\n"
+"\n"
+"                                                Availability, distribution, and use requirements can vary and should be evaluated according to applicable laws and regulations."
+msgstr "Los productos relacionados con peptidos pueden estar disponibles a traves de diferentes vias regulatorias segun el tipo de producto, el uso previsto y la jurisdiccion.\n"
+"\n"
+"                                                Los requisitos de disponibilidad, distribucion y uso pueden variar y deben evaluarse de acuerdo con las leyes y regulaciones aplicables."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "Personal information we collect"
+msgstr "Informacion personal que recopilamos"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_terms_conditions_page
+msgid "Please review our terms carefully before using this website."
+msgstr "Revise cuidadosamente nuestros terminos antes de usar este sitio web."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid ""
+"Premium peptide products for\n"
+"                                            licensed medical professionals and qualified\n"
+"                                            distributors."
+msgstr "Productos peptidicos premium para\n"
+"                                            profesionales medicos autorizados y distribuidores\n"
+"                                            calificados."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"Premium peptide products for clinical <em>\n"
+"                                        professionals.</em>"
+msgstr "Productos peptidicos premium para profesionales <em>\n"
+"                                        clinicos.</em>"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "Privacy Policy"
+msgstr "Politica de privacidad"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"Product\n"
+"                                                    availability, pricing, and order placement."
+msgstr "Disponibilidad de\n"
+"                                                    productos, precios y realizacion de pedidos."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "Products"
+msgstr "Productos"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Products are stored and shipped at 2-8C with\n"
+"                                                validated cold-chain packaging. Temperature logs are\n"
+"                                                available on request."
+msgstr "Los productos se almacenan y envian a 2-8C con\n"
+"                                                empaque de cadena de frio validado. Los registros de temperatura estan\n"
+"                                                disponibles a solicitud."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Quality Standards - Every Lot"
+msgstr "Estandares de calidad - Cada lote"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Quality you can count on."
+msgstr "Calidad en la que puede confiar."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"Reach out to discuss your\n"
+"                                        product needs, minimum orders, pricing, or distribution\n"
+"                                        opportunities. We respond within 1 business day."
+msgstr "Contactenos para hablar sobre sus\n"
+"                                        necesidades de producto, pedidos minimos, precios u oportunidades\n"
+"                                        de distribucion. Respondemos dentro de 1 dia habil."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Ready to work with us?"
+msgstr "Listo para trabajar con nosotros?"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"Refunds will not be issued for incorrect product selection, customer error, "
+"or change of mind."
+msgstr "No se emitiran reembolsos por seleccion incorrecta de producto, error del cliente o cambio de opinion."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid "Replacements are issued under the following conditions:"
+msgstr "Los reemplazos se emiten bajo las siguientes condiciones:"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Research or non-approved compounds that may be\n"
+"                                                    restricted depending on jurisdiction and\n"
+"                                                    intended use."
+msgstr "Compuestos de investigacion o no aprobados que pueden estar\n"
+"                                                    restringidos segun la jurisdiccion y\n"
+"                                                    el uso previsto."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+msgid "Returns and Refunds Policy"
+msgstr "Politica de devoluciones y reembolsos"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "Rights in relation to automated decision-making and profiling."
+msgstr "Derechos relacionados con la toma de decisiones automatizada y la elaboracion de perfiles."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "See All"
+msgstr "Ver todo"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "See all<span class=\"fa fa-long-arrow-right ms-2\"/>"
+msgstr "Ver todo<span class=\"fa fa-long-arrow-right ms-2\"/>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Send Message"
+msgstr "Enviar mensaje"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Send us a message"
+msgstr "Envianos un mensaje"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Some compounds in our catalog have established\n"
+"                                                regulatory pathways for licensed compounding\n"
+"                                                pharmacies. Others are available for international\n"
+"                                                markets. The product catalog clearly shows the\n"
+"                                                availability status of each compound."
+msgstr "Algunos compuestos de nuestro catalogo tienen\n"
+"                                                vias regulatorias establecidas para farmacias de formulacion\n"
+"                                                autorizadas. Otros estan disponibles para mercados\n"
+"                                                internacionales. El catalogo de productos muestra claramente el\n"
+"                                                estado de disponibilidad de cada compuesto."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Tell us what you're looking for..."
+msgstr "Cuentenos que esta buscando..."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_terms_conditions_page
+msgid "Terms and Conditions"
+msgstr "Terminos y condiciones"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"Territory\n"
+"                                                    availability, wholesale pricing, and partnership\n"
+"                                                    inquiries."
+msgstr "Disponibilidad por\n"
+"                                                    territorio, precios mayoristas y consultas de\n"
+"                                                    asociacion."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"The information on this website is for\n"
+"                                                professional reference only. It is not medical\n"
+"                                                advice and does not constitute a recommendation to\n"
+"                                                prescribe, administer, or use any product. BioElevate\n"
+"                                                Universal makes no claims about the therapeutic\n"
+"                                                efficacy of any compound. Product descriptions are\n"
+"                                                for informational purposes only. Regulatory\n"
+"                                                information reflects our best understanding at the\n"
+"                                                time of publication and may change - always verify\n"
+"                                                current status with qualified counsel before making\n"
+"                                                purchasing decisions."
+msgstr "La informacion de este sitio web es solo para\n"
+"                                                referencia profesional. No es consejo\n"
+"                                                medico ni constituye una recomendacion para\n"
+"                                                prescribir, administrar o usar ningun producto. BioElevate\n"
+"                                                Universal no hace afirmaciones sobre la eficacia\n"
+"                                                terapeutica de ningun compuesto. Las descripciones de productos son\n"
+"                                                solo para fines informativos. La informacion\n"
+"                                                regulatoria refleja nuestro mejor entendimiento al\n"
+"                                                momento de la publicacion y puede cambiar; verifique siempre el\n"
+"                                                estado actual con asesoria calificada antes de tomar\n"
+"                                                decisiones de compra."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid ""
+"The issue is related to shipping, packaging damage, or a verified product "
+"defect."
+msgstr "El problema esta relacionado con el envio, danos en el empaque o un defecto de producto verificado."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid "The product has not been used or tampered with."
+msgstr "El producto no ha sido usado ni manipulado."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "The right of access."
+msgstr "El derecho de acceso."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "The right to be informed."
+msgstr "El derecho a ser informado."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "The right to data portability."
+msgstr "El derecho a la portabilidad de los datos."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "The right to erasure."
+msgstr "El derecho de supresion."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "The right to object."
+msgstr "El derecho de oposicion."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "The right to rectification."
+msgstr "El derecho de rectificacion."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "The right to restrict processing."
+msgstr "El derecho a la limitacion del tratamiento."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"To place an order, you need to be operating in a\n"
+"                                                professional capacity - as a licensed physician,\n"
+"                                                clinic operator, compounding pharmacy, or\n"
+"                                                pharmaceutical distributor. We verify this before\n"
+"                                                processing orders."
+msgstr "Para realizar un pedido, usted debe operar en una\n"
+"                                                capacidad profesional, como medico autorizado,\n"
+"                                                operador de clinica, farmacia de formulacion o\n"
+"                                                distribuidor farmaceutico. Verificamos esto antes de\n"
+"                                                procesar pedidos."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Using products in compliance with all applicable\n"
+"                                                    local, state, and federal regulations."
+msgstr "Uso de productos en cumplimiento de todas las regulaciones\n"
+"                                                    locales, estatales y federales aplicables."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"Verifying that each product is legal to import,\n"
+"                                                    compound, dispense, or distribute in your\n"
+"                                                    jurisdiction."
+msgstr "Verificar que cada producto sea legal para importar,\n"
+"                                                    formular, dispensar o distribuir en su\n"
+"                                                    jurisdiccion."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"We have adopted this Privacy Policy, which determines how we are processing "
+"the information collected by BioElevate, which also provides the reasons why"
+" we must collect certain personal data about you. Therefore, you must read "
+"this Privacy Policy before using BioElevate website."
+msgstr "Hemos adoptado esta Politica de Privacidad, que determina como procesamos la informacion recopilada por BioElevate y que tambien proporciona las razones por las que debemos recopilar ciertos datos personales sobre usted. Por lo tanto, debe leer esta Politica de Privacidad antes de usar el sitio web de BioElevate."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"We secure information you provide on computer servers in a controlled, "
+"secure environment, protected from unauthorized access, use, or disclosure. "
+"We keep reasonable administrative, technical, and physical safeguards to "
+"protect against unauthorized access, use, modification, and personal data "
+"disclosure in its control and custody. However, no data transmission over "
+"the Internet or wireless network can be guaranteed."
+msgstr "Protegemos la informacion que usted proporciona en servidores informaticos en un entorno controlado y seguro, protegido contra acceso, uso o divulgacion no autorizados. Mantenemos salvaguardas administrativas, tecnicas y fisicas razonables para proteger contra el acceso no autorizado, uso, modificacion y divulgacion de datos personales bajo su control y custodia. Sin embargo, no se puede garantizar ninguna transmision de datos por Internet o red inalambrica."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"We supply peptide products\n"
+"                                        exclusively to licensed medical professionals and qualified\n"
+"                                        distributors. Every product leaves our facility with\n"
+"                                        verified purity data, cold-chain packaging, and full\n"
+"                                        documentation."
+msgstr "Suministramos productos peptidicos\n"
+"                                        exclusivamente a profesionales medicos autorizados y distribuidores\n"
+"                                        calificados. Cada producto sale de nuestras instalaciones con\n"
+"                                        datos de pureza verificados, empaque de cadena de frio y documentacion\n"
+"                                        completa."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"We take care of your personal data and undertake to guarantee its "
+"confidentiality and security."
+msgstr "Cuidamos sus datos personales y nos comprometemos a garantizar su confidencialidad y seguridad."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"We will disclose any information we collect, use or receive if required or "
+"permitted by law, such as to comply with a subpoena or similar legal "
+"process, and when we believe in good faith that disclosure is necessary to "
+"protect our rights, protect your safety or the safety of others, investigate"
+" fraud, or respond to a government request."
+msgstr "Divulgaremos cualquier informacion que recopilemos, usemos o recibamos si la ley lo exige o permite, como para cumplir con una citacion u otro proceso legal similar, y cuando creamos de buena fe que la divulgacion es necesaria para proteger nuestros derechos, proteger su seguridad o la de otros, investigar fraude o responder a una solicitud gubernamental."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"We'll get back to you\n"
+"                                                within 1 business day."
+msgstr "Le responderemos\n"
+"                                                dentro de 1 dia habil."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"We've written this in plain language. It\n"
+"                                        covers who we sell to, what the products are, how the\n"
+"                                        regulatory framework works, and what your responsibilities\n"
+"                                        are as a buyer. If you have questions, just ask."
+msgstr "Lo hemos redactado en lenguaje claro.\n"
+"                                        Cubre a quien vendemos, que son los productos, como funciona el\n"
+"                                        marco regulatorio y cuales son sus responsabilidades\n"
+"                                        como comprador. Si tiene preguntas, solo pregunte."
+
+#. module: theme_bioelevate
+#: model:ir.model,name:theme_bioelevate.model_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid "What our products are"
+msgstr "Que son nuestros productos"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid "What you need to know."
+msgstr "Lo que necesita saber."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"What you're responsible for as a\n"
+"                                                buyer"
+msgstr "De que es responsable como\n"
+"                                                comprador"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"When you purchase from BioElevate, you take on\n"
+"                                                responsibility for:"
+msgstr "Cuando compra en BioElevate, usted asume la\n"
+"                                                responsabilidad de:"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"When you visit BioElevate, we automatically collect certain information "
+"about your device, including information about your web browser, IP address,"
+" time zone, and some of the installed cookies on your device. Additionally, "
+"as you browse the Site, we collect information about the individual web "
+"pages or products you view, what websites or search terms referred you to "
+"the Site, and how you interact with the Site. We refer to this "
+"automatically-collected information as Device Information. Moreover, we "
+"might collect the personal data you provide to us (including but not limited"
+" to Name, Surname, Address, payment information, etc.) during registration "
+"to be able to fulfill the agreement."
+msgstr "Cuando visita BioElevate, recopilamos automaticamente cierta informacion sobre su dispositivo, incluida informacion sobre su navegador web, direccion IP, zona horaria y algunas de las cookies instaladas en su dispositivo. Adicionalmente, mientras navega por el Sitio, recopilamos informacion sobre las paginas web o productos individuales que ve, que sitios web o terminos de busqueda le remitieron al Sitio y como interactua con el Sitio. A esta informacion recopilada automaticamente la denominamos Informacion del Dispositivo. Ademas, podemos recopilar los datos personales que usted nos proporcione (incluidos, entre otros, nombre, apellido, direccion, informacion de pago, etc.) durante el registro para poder cumplir el acuerdo."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid "Who we sell to"
+msgstr "A quien vendemos"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "Why do we process your data?"
+msgstr "Por que procesamos sus datos?"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid ""
+"You can visit the website without telling us who you are or revealing any "
+"information, by which someone could identify you as a specific, identifiable"
+" individual. If, however, you wish to use some of the website's features, or"
+" you wish to receive our newsletter or provide other details by filling a "
+"form, you may provide personal data to us, such as your email, first name, "
+"last name, city of residence, organization, telephone number. You can choose"
+" not to provide us with your personal data, but then you may not be able to "
+"take advantage of some of the website's features. For example, you will not "
+"be able to receive our Newsletter or contact us directly from the website. "
+"Users who are uncertain about what information is mandatory are welcome to "
+"contact us via info@bioelevate.org."
+msgstr "Puede visitar el sitio web sin decirnos quien es ni revelar ninguna informacion mediante la cual alguien pudiera identificarlo como una persona especifica e identificable. Sin embargo, si desea usar algunas funciones del sitio web, o recibir nuestro boletin o proporcionar otros datos al completar un formulario, puede facilitarnos datos personales como su correo electronico, nombre, apellido, ciudad de residencia, organizacion y numero de telefono. Puede optar por no proporcionarnos sus datos personales, pero entonces podria no poder aprovechar algunas funciones del sitio web. Por ejemplo, no podra recibir nuestro boletin ni contactarnos directamente desde el sitio web. Los usuarios que no esten seguros de que informacion es obligatoria pueden contactarnos en info@bioelevate.org."
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_return_policy_ir_ui_view
+msgid "You contact us within 7 days of delivery."
+msgstr "Nos contacta dentro de los 7 dias posteriores a la entrega."
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid ""
+"Your Dynamic Snippet will be displayed here... This\n"
+"                                            message is displayed because you did not provide enough\n"
+"                                            options to retrieve its content.<br/>"
+msgstr "Su fragmento dinamico se mostrara aqui... Este\n"
+"                                            mensaje se muestra porque no proporciono suficientes\n"
+"                                            opciones para recuperar su contenido.<br/>"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "Your clinic or organization"
+msgstr "Su clinica u organizacion"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_privacy_policy_ir_ui_view
+msgid "Your rights"
+msgstr "Sus derechos"
+
+#. module: theme_bioelevate
+#: model:product.tag,name:theme_bioelevate.product_tag_best_seller
+msgid "best_seller"
+msgstr "best_seller"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "coa@bioelevate.org"
+msgstr "coa@bioelevate.org"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "orders@bioelevate.org"
+msgstr "orders@bioelevate.org"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_footer_content
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "partners@bioelevate.org"
+msgstr "partners@bioelevate.org"
+
+#. module: theme_bioelevate
+#: model_terms:theme.ir.ui.view,arch:theme_bioelevate.theme_homepage_content
+msgid "you@organization.com"
+msgstr "you@organization.com"
+
+#. module: theme_bioelevate
+#: model_terms:ir.ui.view,arch_db:theme_bioelevate.page_legal_compliance_ir_ui_view
+msgid ""
+"© 2026 BioElevate. All rights\n"
+"                                                reserved."
+msgstr "© 2026 BioElevate. Todos los derechos\n"
+"                                                reservados."

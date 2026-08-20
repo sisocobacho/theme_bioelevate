@@ -11,7 +11,9 @@ Source reference: addons/website/models/theme_models.py:74-108
 """
 
 import base64
+import json
 import os
+import re
 
 from odoo.modules.module import get_manifest
 from odoo.tests import TransactionCase, tagged
@@ -248,10 +250,29 @@ class TestThemePages(TransactionCase):
             "Expected infographic attachment URL to point to the theme static image.",
         )
 
-    def test_homepage_infographic_section_after_best_sellers_and_without_text(self):
-        """Verify homepage has image-only infographic snippet right after Best Sellers."""
+    def test_homepage_infographic_spanish_attachment_exists(self):
+        """Verify Spanish infographic image attachment is registered in theme data."""
+        infographic_attachment = self.env.ref(
+            "theme_bioelevate.img_infog_bioelevate_es",
+            raise_if_not_found=False,
+        )
+        self.assertIsNotNone(
+            infographic_attachment,
+            "Expected Spanish infographic image attachment to exist.",
+        )
+        self.assertEqual(
+            infographic_attachment.url,
+            "/theme_bioelevate/static/src/img/Infog_bioelevate_ES.jpg.jpeg",
+            "Expected Spanish infographic attachment URL to point to the theme static image.",
+        )
+
+    def test_homepage_infographic_sections_after_best_sellers_and_without_text(self):
+        """Verify homepage has EN/ES image-only infographic snippets right after Best Sellers."""
+        from html import unescape
+
         theme_view = self.env.ref("theme_bioelevate.theme_homepage_content")
         arch = theme_view.arch or ""
+        arch_unescaped = unescape(arch)
 
         self.assertIn(
             'data-snippet="s_picture"',
@@ -264,9 +285,19 @@ class TestThemePages(TransactionCase):
             "Expected infographic section data-name to be BioElevate Infographic.",
         )
         self.assertIn(
+            'data-name="BioElevate Infographic ES"',
+            arch,
+            "Expected Spanish infographic section data-name to be BioElevate Infographic ES.",
+        )
+        self.assertIn(
             "/web/image/theme_bioelevate.img_infog_bioelevate_en",
             arch,
-            "Expected infographic section image to use the theme attachment URL.",
+            "Expected EN infographic section image to use the EN theme attachment URL.",
+        )
+        self.assertIn(
+            "/web/image/theme_bioelevate.img_infog_bioelevate_es",
+            arch,
+            "Expected ES infographic section image to use the ES theme attachment URL.",
         )
         self.assertNotIn(
             "Step Up Your Game",
@@ -278,23 +309,108 @@ class TestThemePages(TransactionCase):
             arch,
             "Expected default s_picture caption to be removed for image-only snippet.",
         )
+        self.assertIn(
+            'data-visibility="conditional"',
+            arch,
+            "Expected infographic sections to use Odoo conditional visibility metadata.",
+        )
+        self.assertIn(
+            "data-visibility-value-lang",
+            arch,
+            "Expected infographic sections to define language visibility data.",
+        )
+
+        visibility_lang_values = re.findall(
+            r'data-visibility-value-lang="([^"]+)"',
+            arch,
+        )
+        self.assertGreaterEqual(
+            len(visibility_lang_values),
+            2,
+            "Expected EN/ES infographic sections to include language visibility payloads.",
+        )
+        parsed_lang_payloads = []
+        for visibility_lang_value in visibility_lang_values:
+            try:
+                payload = json.loads(unescape(visibility_lang_value))
+            except json.JSONDecodeError as exc:
+                self.fail(
+                    "Expected data-visibility-value-lang to be valid JSON, "
+                    f"but got parse error: {exc}"
+                )
+            self.assertIsInstance(
+                payload,
+                list,
+                "Expected data-visibility-value-lang JSON payload to be a list.",
+            )
+            parsed_lang_payloads.extend(payload)
+
+        payload_codes = {record.get("code") for record in parsed_lang_payloads}
+        self.assertIn(
+            "en_US",
+            payload_codes,
+            "Expected language visibility payload to include en_US.",
+        )
+        self.assertIn(
+            "es_ES",
+            payload_codes,
+            "Expected language visibility payload to include es_ES.",
+        )
+        self.assertIn(
+            "en-US",
+            arch_unescaped,
+            "Expected conditional visibility selectors to include the EN locale selector.",
+        )
+        self.assertIn(
+            "es-ES",
+            arch_unescaped,
+            "Expected conditional visibility selectors to include the ES locale selector.",
+        )
 
         best_sellers_index = arch.find('data-name="Best Sellers"')
-        infographic_index = arch.find('data-name="BioElevate Infographic"')
+        infographic_en_index = arch.find('data-name="BioElevate Infographic"')
+        infographic_es_index = arch.find('data-name="BioElevate Infographic ES"')
         hero_index = arch.find('data-name="Hero"')
 
         self.assertGreaterEqual(best_sellers_index, 0, "Best Sellers section marker not found.")
-        self.assertGreaterEqual(infographic_index, 0, "Infographic section marker not found.")
+        self.assertGreaterEqual(infographic_en_index, 0, "EN infographic section marker not found.")
+        self.assertGreaterEqual(infographic_es_index, 0, "ES infographic section marker not found.")
         self.assertGreaterEqual(hero_index, 0, "Hero section marker not found.")
         self.assertLess(
             best_sellers_index,
-            infographic_index,
-            "Expected infographic section to be placed after Best Sellers.",
+            infographic_en_index,
+            "Expected EN infographic section to be placed after Best Sellers.",
         )
         self.assertLess(
-            infographic_index,
+            best_sellers_index,
+            infographic_es_index,
+            "Expected ES infographic section to be placed after Best Sellers.",
+        )
+        self.assertLess(
+            infographic_en_index,
             hero_index,
-            "Expected infographic section to be placed before Hero.",
+            "Expected EN infographic section to be placed before Hero.",
+        )
+        self.assertLess(
+            infographic_es_index,
+            hero_index,
+            "Expected ES infographic section to be placed before Hero.",
+        )
+
+    def test_spanish_translation_file_has_no_empty_msgstr_entries(self):
+        """Verify es.po has no empty msgstr entries except the PO header."""
+        from odoo.tools.misc import file_path
+
+        module_path = file_path("theme_bioelevate")
+        po_path = os.path.join(module_path, "i18n", "es.po")
+        with open(po_path, "r", encoding="utf-8") as po_file:
+            po_content = po_file.read()
+
+        empty_msgstr_lines = re.findall(r'^msgstr ""$', po_content, flags=re.MULTILINE)
+        self.assertEqual(
+            len(empty_msgstr_lines),
+            1,
+            "Expected only the PO header msgstr to be empty in i18n/es.po.",
         )
 
     def test_homepage_category_filmstrip_snippet_above_best_sellers(self):

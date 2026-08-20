@@ -82,15 +82,42 @@
                         </div>
                     </section>
 
-                    <section class="s_picture pt48 pb48" data-snippet="s_picture"
-                        data-name="BioElevate Infographic">
+                    <section
+                        class="s_picture pt48 pb48 o_snippet_invisible o_colored_level o_conditional_hidden"
+                        data-snippet="s_picture" data-name="BioElevate Infographic"
+                        data-visibility="conditional"
+                        data-visibility-value-lang='[{"id":1,"code":"en_US","display_name":"English (US)","name":"English (US)"}]'
+                        data-visibility-id="lang_o_1"
+                        data-visibility-selectors="html:not([lang='en-US']) body:not(.editor_enable) [data-visibility-id='lang_o_1']">
                         <div class="container">
                             <div class="row">
-                                <div class="col-12" style="text-align: center;">
+                                <div class="col-12 o_colored_level" style="text-align: center;">
                                     <figure class="figure w-100 mb-0">
-                                        <img src="/web/image/theme_bioelevate.img_infog_bioelevate_en"
+                                        <img
+                                            src="/web/image/theme_bioelevate.img_infog_bioelevate_en"
                                             class="figure-img img-fluid rounded"
-                                            alt="BioElevate infographic" />
+                                            alt="BioElevate infographic" loading="lazy" />
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section
+                        class="s_picture pt48 pb48 o_snippet_invisible o_colored_level o_conditional_hidden"
+                        data-snippet="s_picture" data-name="BioElevate Infographic ES"
+                        data-visibility="conditional"
+                        data-visibility-value-lang='[{"id":83,"code":"es_ES","display_name":"Spanish / Español","name":"Spanish / Español"}]'
+                        data-visibility-id="lang_o_83"
+                        data-visibility-selectors="html:not([lang='es-ES']) body:not(.editor_enable) [data-visibility-id='lang_o_83']">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 o_colored_level" style="text-align: center;">
+                                    <figure class="figure w-100 mb-0">
+                                        <img
+                                            src="/web/image/theme_bioelevate.img_infog_bioelevate_es"
+                                            class="figure-img img-fluid rounded"
+                                            alt="Infografia de BioElevate" loading="lazy" />
                                     </figure>
                                 </div>
                             </div>
