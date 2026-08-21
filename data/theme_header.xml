@@ -4,6 +4,9 @@
         <function model="theme.utils" name="enable_view">
             <value eval="'website.template_header_stretch'" />
         </function>
+        <function model="theme.utils" name="disable_view">
+            <value eval="'website.header_text_element'" />
+        </function>
 
         <record id="theme_header_cta_contact_section" model="theme.ir.ui.view">
             <field name="name">Theme Header CTA Contact Section Link</field>
